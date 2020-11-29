@@ -1,0 +1,10 @@
+{
+    "name": "mcsm",
+    "productName": "mcsm",
+    "version": "0.0.1",
+    "main": "main.js",
+    "dependencies": {
+        "jquery": "^3.5.1",
+        "mdbootstrap": "^4.19.1"
+    }
+}
