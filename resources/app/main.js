@@ -2,8 +2,10 @@ const electron = require("electron");
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 const {shell} = require("electron");
+const fs = require("fs");
 
 var mainWindow = null;
+let dir = app.getPath('documents') + '/MCSM/';
 
 app.on("window-all-closed", function(){
     if (process.platform != "darwin"){
@@ -19,11 +21,22 @@ app.on("ready", function(){
         useContentSize: true,
         transparent: false,
         frame: true,
+        minWidth: 1024,
+        minHeight: 480,
         webPreferences: {
             nodeIntegration: true,
             enableRemoteModule: true
         }
     })
-    mainWindow.loadURL("file://"+__dirname+"/index.html")
+
+    fs.access(dir, (err) => {
+        if (err) {
+            fs.mkdir(dir, { recursive: false }, (err) => {
+                if (err) throw err;
+              })
+        }
+      })
+
+    mainWindow.loadURL("file://"+__dirname+"/loadserver.html")
     mainWindow.toggleDevTools();
 })

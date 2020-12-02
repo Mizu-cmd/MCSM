@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="../../node_modules/mdbootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../../node_modules/mdbootstrap/css/mdb.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/createserver.css">
     <title>MCSM</title>
 </head>
 <body>
@@ -29,11 +30,11 @@
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <a class="nav-link" href="#">CREATE SERVER
-            <span class="sr-only">(current)</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">LOAD SERVER</a>
+          <a class="nav-link" href="loadserver.html">LOAD SERVER
+          </a>
         </li>
   
   
@@ -51,16 +52,54 @@
   </nav>
   <!--/.Navbar-->
 
+  <!--Option list-->
+  <form class="text-center p-5 md-form animated fadeIn faster" action="#">
+    <p class="h4 special-color-dark p-2">Generals</p>
+    <br/>
 
-  <div class="container" id="servers">
-    <div class="row">
-      <div class="col mt-3 p-3 border border-stylish rounded mb-0 special-color-dark">Server Name</div>
+  <div class="form-row">  
+      <div class="col">
+          <!-- Name -->
+            <input type="text" id="form1" class="form-control">
+            <label for="form1">Server name</label>
+      </div>
+      <div class="col">
+          <!-- Players -->
+          <div>
+            <input type="number" id="numberExample" class="form-control">
+            <label for="numberExample">Number of players</label>
+          </div>
+      </div>
+  </div>
+  <br/>
+  <div class="form-row">
+    <div class="col">
+      <select class="browser-default custom-select">
+        <option value="1">Spigot</option>
+        <option value="2">Bukkit</option>
+        <option value="3">Sponge</option>
+        <option value="3">Forge</option>
+        <option value="3">Spongeforge</option>
+      </select>
+    </div>
+    <div class="col ">
+      <select class="browser-default custom-select">
+        <option value="" disabled selected>Version</option>
+        <option value="1">1.16.4</option>
+        <option value="2">1.16.3</option>
+        <option value="3">Sponge</option>
+        <option value="3">Forge</option>
+        <option value="3">Spongeforge</option>
+      </select>
     </div>
   </div>
 
+  </form>
+
     <script>
         window.jQuery = window.$ = require('../../node_modules/jquery/dist/jquery.min.js')
-        require('./renderer.js')
+        require('./js/renderer_createserver.js')
     </script>
-</body>
+    <script src="../../node_modules/mdbootstrap/js/mdb.js"></script>
+    </body>
 </html>
