@@ -1,5 +1,6 @@
 git fetch
 git merge
+pause
 git status
 pause
 git add .
