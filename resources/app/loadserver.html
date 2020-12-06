@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../node_modules/mdbootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../../node_modules/mdbootstrap/css/mdb.css">
+    <script src="https://kit.fontawesome.com/6e9a4a2576.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./external/bs4.pop.css">
+    <script src="./external/bs4.pop.js"></script>
     <title>MCSM</title>
 </head>
 <body>
@@ -14,13 +17,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark special-color-dark">
 
     <!-- Navbar brand -->
-    <a class="navbar-brand" href="#">MCSM</a>
-  
-    <!-- Collapse button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <a id="icon" class="mx-auto" style="text-shadow: rgb(39, 50, 55) 0px 0px, rgb(40, 52, 58) 1px 1px, rgb(42, 54, 60) 2px 2px, rgb(43, 56, 62) 3px 3px, rgb(45, 58, 65) 4px 4px, rgb(47, 60, 67) 5px 5px, rgb(48, 62, 70) 6px 6px, rgb(50, 65, 72) 7px 7px, rgb(52, 67, 74) 8px 8px, rgb(53, 69, 77) 9px 9px; font-size: 20px; color: rgb(255, 255, 255); background-color: rgb(55, 71, 79); height: 60px; width: 60px; line-height: 60px; border-radius: 0%; overflow: hidden; text-align: center;">MCSM</a>
   
     <!-- Collapsible content -->
     <div class="collapse navbar-collapse" id="basicExampleNav">
@@ -51,7 +48,7 @@
 
   <!--Server list-->
   <div class="container" id="servers">
-    <div class="d-none row" id="template">
+    <div class="d-none row " id="template">
       <div class="col mt-3 p-3 border border-stylish rounded mb-0 special-color-dark animated fadeIn faster">
         <button type="button" class="btn btn-danger float-right btn-sm">Delete</button>
         <button type="button" class="btn btn-mdb-color float-right btn-sm">Rename</button>
@@ -60,10 +57,9 @@
       </div>
     </div>
   </div>
-
-    <script>
-        window.jQuery = window.$ = require('../../node_modules/jquery/dist/jquery.min.js')
-        require('./js/renderer_loadserver.js')
-    </script>
+  <script>
+      window.jQuery = window.$ = require('../../node_modules/jquery/dist/jquery.min.js')
+      require('./js/renderer_loadserver.js')
+  </script>
 </body>
 </html>

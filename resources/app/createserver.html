@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../node_modules/mdbootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../../node_modules/mdbootstrap/css/mdb.css">
+    <script src="https://kit.fontawesome.com/6e9a4a2576.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/createserver.css">
     <title>MCSM</title>
@@ -16,12 +17,6 @@
 
     <!-- Navbar brand -->
     <a class="navbar-brand" href="#">MCSM</a>
-  
-    <!-- Collapse button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
   
     <!-- Collapsible content -->
     <div class="collapse navbar-collapse" id="basicExampleNav">
@@ -51,23 +46,23 @@
   
   </nav>
   <!--/.Navbar-->
-
+  
   <!--Option list-->
   <form class="text-center p-5 md-form animated fadeIn faster" action="#">
-    <p class="h4 special-color-dark p-2">Generals</p>
-    <br/>
+      <p class="h4 special-color-dark p-2">Generals</p>
+  <br/>
 
   <div class="form-row">  
       <div class="col">
           <!-- Name -->
-            <input type="text" id="form1" class="form-control">
-            <label for="form1">Server name</label>
+            <input type="text" id="name" class="form-control">
+            <label for="name">Server name</label>
       </div>
       <div class="col">
           <!-- Players -->
           <div>
-            <input type="number" id="numberExample" class="form-control">
-            <label for="numberExample">Number of players</label>
+            <input type="number" id="players-number" class="form-control">
+            <label for="players-number">Number of players</label>
           </div>
       </div>
   </div>
@@ -82,20 +77,92 @@
         <option value="3">Spongeforge</option>
       </select>
     </div>
-    <div class="col ">
+    <div class="col">
       <select class="browser-default custom-select">
         <option value="" disabled selected>Version</option>
         <option value="1">1.16.4</option>
         <option value="2">1.16.3</option>
-        <option value="3">Sponge</option>
-        <option value="3">Forge</option>
-        <option value="3">Spongeforge</option>
+        <option value="3">1.16.2</option>
+        <option value="3">1.16.1</option>
+        <option value="3">1.15.2</option>
       </select>
+    </div>
+    <!--Bukkit-->
+    <div class="col d-none">
+      <select class="browser-default custom-select">
+        <option value="" disabled selected>Version</option>
+        <option value="1">1.16.4</option>
+        <option value="2">1.16.3</option>
+        <option value="3">1.16.2</option>
+        <option value="3">1.16.1</option>
+        <option value="3">1.15.2</option>
+      </select>
+    </div>
+        <!--Sponge-->
+        <div class="col d-none">
+          <select class="browser-default custom-select">
+            <option value="" disabled selected>Version</option>
+            <option value="1">1.16.4</option>
+            <option value="2">1.16.3</option>
+            <option value="3">1.16.2</option>
+            <option value="3">1.16.1</option>
+            <option value="3">1.15.2</option>
+          </select>
+        </div>
+        <!--Forge-->
+        <div class="col d-none">
+          <select class="browser-default custom-select">
+            <option value="" disabled selected>Version</option>
+            <option value="1">1.16.4</option>
+            <option value="2">1.16.3</option>
+            <option value="3">1.16.2</option>
+            <option value="3">1.16.1</option>
+            <option value="3">1.15.2</option>
+          </select>
+        </div>
+      <!--Spongeforge-->
+    <div class="col d-none">
+      <select class="browser-default custom-select">
+        <option value="" disabled selected>Version</option>
+        <option value="1">1.16.4</option>
+        <option value="2">1.16.3</option>
+        <option value="3">1.16.2</option>
+        <option value="4">1.16.1</option>
+        <option value="5">1.15.2</option>
+      </select>
+    </div>
+  </div>
+  <p class="h4 special-color-dark p-2 mt-5">Details</p>
+  <br/>
+  <div class="form-row">  
+    <div class="col">
+        <!-- Max ram -->
+          <input type="number" min="1" id="max-ram" class="form-control">
+          <label for="max-ram">Maximum ram</label>
+    </div>
+    <div class="col">
+        <!-- Min ram -->
+        <div>
+          <input type="number" min="1" id="min-ram" class="form-control" >
+          <label for="min-ram">Minimum ram</label>
+        </div>
+    </div>
+  </div>
+    <div class="form-row">
+      
+    </div>
+  </div>
+
+  <p class="h4 special-color-dark p-2 mt-5">Map</p>
+  <br/>
+  <div class="form-row">
+    <div class="shadow-lg z-depth-5 bg-dark p-5 w-100 mt-2 rounded text-center justify-content-center" id="drag-file" style="transition: 0.24s;">
+      <p class="h5">Drag and drop file here</p>
+      <p>Or click to select one</p>
     </div>
   </div>
 
   </form>
-
     <script>
         window.jQuery = window.$ = require('../../node_modules/jquery/dist/jquery.min.js')
         require('./js/renderer_createserver.js')

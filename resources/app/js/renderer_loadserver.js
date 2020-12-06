@@ -72,7 +72,6 @@ function rename(oldFile, e){
             console.log(err);
             return;
           }
-          location.reload();
         });
     }
 });
