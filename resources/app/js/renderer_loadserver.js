@@ -27,7 +27,7 @@ fs.readdir(documents + '/MCSM/', function (err, files){
     }
 
     files.forEach(function (file){
-        var div = '<div class="row"><div class="col mt-3 p-3 border border-stylish rounded mb-0 special-color-dark animated fadeIn faster"><button type="button" server="'+file+'" class="btn btn-danger float-right btn-sm btn-delete">Delete</button><button type="button" server="'+file+'" class="btn btn-mdb-color float-right btn-sm btn-rename">Rename</button><button type="button" server="'+file+'" class="btn btn-success float-right btn-sm btn-launch">Launch</button><p>'+file+'</p></div></div>';
+        var div = '<div class="row"><div class="col mt-3 p-3 border border-stylish rounded mb-0 special-color-dark animated fadeIn faster"><button type="button" server="'+file+'" class="btn btn-danger float-right btn-sm btn-delete waves-effect waves-light">Delete</button><button type="button" server="'+file+'" class="btn btn-mdb-color float-right btn-sm btn-rename waves-effect waves-light">Rename</button><button type="button" server="'+file+'" class="btn btn-success float-right btn-sm btn-launch waves-effect waves-light">Launch</button><p>'+file+'</p></div></div>';
         $('#servers').append(div);
     })
 })
