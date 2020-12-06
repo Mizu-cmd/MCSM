@@ -28,25 +28,17 @@
   
       <!-- Links -->
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">CREATE SERVER
-          </a>
-        </li>
         <li class="nav-item">
           <a class="nav-link" href="loadserver.html">LOAD SERVER
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">CREATE SERVER
           </a>
         </li>
   
   
       </ul>
-      <!-- Links -->
-  
-      <form class="form-inline">
-        <div class="md-form my-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-        </div>
-      </form>
-    </div>
     <!-- Collapsible content -->
   
   </nav>
@@ -75,6 +67,7 @@
   <div class="form-row">
     <div class="col">
       <select class="browser-default custom-select">
+        <option value="" disabled selected>Server version</option>
         <option value="1">Spigot</option>
         <option value="2">Bukkit</option>
         <option value="3">Sponge</option>
@@ -87,11 +80,202 @@
         <option value="" disabled selected>Version</option>
         <option value="1">1.16.4</option>
         <option value="2">1.16.3</option>
+        <option value="3">1.16.2</option>
+        <option value="4">1.16.1</option>
+        <option value="5">1.16</option>
+        <option value="6">1.15.2</option>
+        <option value="7">1.15.1</option>
+        <option value="8">1.15</option>
+        <option value="9">1.14.4</option>
+        <option value="10">1.14.3</option>
+        <option value="11">1.14.2</option>
+        <option value="12">1.14.2</option>
+        <option value="13">1.14.1</option>
+        <option value="14">1.14</option>
+        <option value="15">1.13.2</option>
+        <option value="16">1.13.1</option>
+        <option value="17">1.13</option>
+        <option value="18">1.12.2</option>
+        <option value="19">1.12.1</option>
+        <option value="20">1.12</option>
+        <option value="21">1.11.2</option>
+        <option value="22">1.11.1</option>
+        <option value="23">1.11</option>
+        <option value="24">1.10.2</option>
+        <option value="25">1.10.1</option>
+        <option value="26">1.10</option>
+        <option value="27">1.9.4</option>
+        <option value="28">1.9.3</option>
+        <option value="29">1.9.2</option>
+        <option value="30">1.9.1</option>
+        <option value="31">1.9</option>
+        <option value="32">1.8.9</option>
+        <option value="33">1.8.8</option>
+        <option value="34">1.8.7</option>
+        <option value="35">1.8.6</option>
+        <option value="36">1.8.5</option>
+        <option value="37">1.8.4</option>
+        <option value="38">1.8.3</option>
+        <option value="39">1.8.2</option>
+        <option value="40">1.8.1</option>
+        <option value="41">1.8</option>
+        <option value="42">1.7.10</option>
+        <option value="43">1.7.9</option>
+        <option value="44">1.7.8</option>
+        <option value="45">1.7.7</option>
+        <option value="46">1.7.6</option>
+        <option value="47">1.7.5</option>
+        <option value="48">1.7.4</option>
+        <option value="49">1.7.2</option>
+        <option value="50">1.6.4</option>
+        <option value="51">1.6.2</option>
+        <option value="52">1.6.1</option>
+        <option value="53">1.5.2</option>
+        <option value="54">1.5.1</option>
+        <option value="55">1.5</option>
       </select>
     </div>
   </div>
 
   </form>
+
+  <form class="text-center p-5 md-form animated fadeIn faster" action="#">
+    <p class="h4 special-color-dark p-2">Details</p>
+    <br/>
+    <div class="form-row">
+      <div class="col">
+        <div class="custom-control custom-switch">
+          <input type="checkbox" class="custom-control-input" id="customSwitches1">
+          <label class="custom-control-label" for="customSwitches1">Online mod (allow crack)</label>
+        </div>
+      </div>  
+      <div class="col">
+        <div class="custom-control custom-switch">
+          <input type="checkbox" class="custom-control-input" id="customSwitches2">
+          <label class="custom-control-label" for="customSwitches2">White list</label>
+        </div>
+      </div>  
+    </div> 
+  </form>
+
+  <form class="text-center p-5 md-form animated fadeIn faster " action="#">
+    <p class="h4 special-color-dark p-2">Mods/Plugins</p>
+    <p class="black-text p-2" style="font-size: 35px">The best mods or plugins that we recommend for your server.</p>  
+    <br/>
+    <div class="form-row">
+      <div class="col">
+        <div class="row">
+          <p class="text-right black-text p-2" style="font-size: 20px">MODS:</p>
+        </div>
+        <div class="form-row center border border-light p-4 pr-4 h4 col">
+          <div class="form-row text-center col-6">
+            <div class="col">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultUnchecked1">
+                <label class="custom-control-label" for="defaultUnchecked1">Mod 1</label>
+              </div>  
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultUnchecked2">
+                <label class="custom-control-label" for="defaultUnchecked2">Mod 2</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultUnchecked3">
+                <label class="custom-control-label" for="defaultUnchecked3">Mod 3</label>
+              </div>    
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultUnchecked4">
+                <label class="custom-control-label" for="defaultUnchecked4">Mod 4</label>
+              </div>    
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultUnchecked5">
+                <label class="custom-control-label" for="defaultUnchecked5">Mod 5</label>
+              </div>        
+            </div> 
+          </div>
+          <div class="form-row text-center col-6">
+            <div class="col">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultUnchecked6">
+                <label class="custom-control-label" for="defaultUnchecked6">Mod 6</label>
+              </div>  
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultUnchecked7">
+                <label class="custom-control-label" for="defaultUnchecked7">Mod 7</label>
+              </div> 
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultUnchecked8">
+                <label class="custom-control-label" for="defaultUnchecked8">Mod 8</label>
+              </div>    
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultUnchecked9">
+                <label class="custom-control-label" for="defaultUnchecked9">Mod 9</label>
+              </div>    
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultUnchecked10">
+                <label class="custom-control-label" for="defaultUnchecked10">Mod 10</label>
+              </div>    
+            </div>  
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="row">
+          <p class="text-right black-text p-2" style="font-size: 20px">PLUGINS:</p>
+        </div>
+        <div class="form-row center border border-light p-4 pr-4 h4 col">
+          <div class="form-row text-center col-6">
+            <div class="col">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultUnchecked11">
+                <label class="custom-control-label" for="defaultUnchecked11">Plugin 1</label>
+              </div>  
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultUnchecked12">
+                <label class="custom-control-label" for="defaultUnchecked12">Plugin 2</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultUnchecked13">
+                <label class="custom-control-label" for="defaultUnchecked13">Plugin 3</label>
+              </div>    
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultUnchecked14">
+                <label class="custom-control-label" for="defaultUnchecked14">Plugin 4</label>
+              </div>    
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultUnchecked15">
+                <label class="custom-control-label" for="defaultUnchecked15">Plugin 5</label>
+              </div>        
+            </div> 
+          </div>
+          <div class="form-row text-center col-6">
+            <div class="col">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultUnchecked16">
+                <label class="custom-control-label" for="defaultUnchecked16">Plugin 6</label>
+              </div>  
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultUnchecked17">
+                <label class="custom-control-label" for="defaultUnchecked17">Plugin 7</label>
+              </div> 
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultUnchecked18">
+                <label class="custom-control-label" for="defaultUnchecked18">Plugin 8</label>
+              </div>    
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultUnchecked19">
+                <label class="custom-control-label" for="defaultUnchecked19">Plugin 9</label>
+              </div>    
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultUnchecked20">
+                <label class="custom-control-label" for="defaultUnchecked20">Plugin 10</label>
+              </div>    
+            </div>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  
 
     <script>
         window.jQuery = window.$ = require('../../../node_modules/jquery/dist/jquery.min.js')
