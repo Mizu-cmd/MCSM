@@ -37,6 +37,6 @@ app.on("ready", function(){
         }
       })
 
-    mainWindow.loadURL("file://"+__dirname+"/loadserver.html")
+    mainWindow.loadURL("file://"+__dirname+"/dashboard.html")
     mainWindow.toggleDevTools();
 })

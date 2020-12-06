@@ -5,10 +5,9 @@ const { remote } = require('electron');
 const app = remote.app;
 
 let documents = app.getPath('documents') + '/MCSM/';
-var drag = $('#drag-file');
-var attributes = drag.attr('class');
 
 $(document).ready(function() {
+    download("http://cdn.getbukkit.org/spigot/spigot-1.16.4.jar", documents+"bukkit.jar")
 })
 
 var download = function(url, dest, cb) {
@@ -23,26 +22,3 @@ var download = function(url, dest, cb) {
       if (cb) cb(err.message);
     });
   };
-
-
-  drag.on('drop', (event) => { 
-    event.preventDefault(); 
-    event.stopPropagation(); 
-    var file = event.originalEvent.dataTransfer.files[0];
-
-    console.log(file.path);
-    $('#drag-file p').hide()
-    drag.text(file.name)
-}); 
-  
-drag.on('dragover', (e) => { 
-    e.preventDefault(); 
-    e.stopPropagation(); 
-  }); 
-  
-drag.on('dragenter', (event) => { 
-}); 
-  
-drag.on('dragleave', (event) => { 
-    console.log('File has left the Drop Space'); 
-}); 
