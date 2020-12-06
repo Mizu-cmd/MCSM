@@ -136,27 +136,43 @@
       </select>
     </div>
   </div>
-
   </form>
-
   <form class="text-center p-5 md-form animated fadeIn faster" action="#">
     <p class="h4 special-color-dark p-2">Details</p>
-    <br/>
     <div class="form-row">
       <div class="col">
-        <div class="custom-control custom-switch">
-          <input type="checkbox" class="custom-control-input" id="customSwitches1">
-          <label class="custom-control-label" for="customSwitches1">Online mod (allow crack)</label>
+        <div class="d-flex justify-content-center my-4">
+          <div class="w-75">
+            <input type="range" class="custom-range" id="min-ram" min="500" max="32000" value="512">
+          </div>
+          <span class="font-weight-bold text-dark ml-2 min-ram-span"></span>
         </div>
-      </div>  
+      </div>
       <div class="col">
-        <div class="custom-control custom-switch">
-          <input type="checkbox" class="custom-control-input" id="customSwitches2">
-          <label class="custom-control-label" for="customSwitches2">White list</label>
+        <div class="d-flex justify-content-center my-4">
+          <div class="w-75">
+            <input type="range" class="custom-range" id="max-ram" value="1024" min="500" max="32000">
+          </div>
+          <span class="font-weight-bold text-dark ml-2 max-ram-span"></span>
         </div>
-      </div>  
-    </div> 
+      </div>
+    </div>
   </form>
+  
+  <div class="container text-center">
+    <div class="custom-control custom-switch custom-control-inline">
+      <input type="checkbox" class="custom-control-input" id="eula">
+      <label class="black-text custom-control-label" for="eula">EULA</label>
+    </div>
+    <div class="custom-control custom-switch custom-control-inline">
+      <input type="checkbox" class="custom-control-input" id="white-list">
+      <label class="lever black-text custom-control-label" for="white-list">White list</label>
+    </div>
+    <div class="custom-control custom-switch custom-control-inline">
+      <input type="checkbox" class="custom-control-input" id="online">
+      <label class="lever black-text custom-control-label" for="online">Allow crack</label>
+    </div>
+  </div>
 
   <form class="text-center p-5 md-form animated fadeIn faster " action="#">
     <p class="h4 special-color-dark p-2">Mods/Plugins</p>
