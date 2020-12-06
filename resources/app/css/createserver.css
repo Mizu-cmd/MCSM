@@ -1,0 +1,14 @@
+.custom-control-label:hover{
+    cursor: pointer !important;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    background: #263238;
+}
+input[type=range]::-moz-range-thumb {
+    background: #263238;
+}
+input[type=range]::-ms-thumb {
+    background: #263238;
+}
+

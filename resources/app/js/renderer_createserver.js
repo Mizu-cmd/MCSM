@@ -7,8 +7,30 @@ const app = remote.app;
 let documents = app.getPath('documents') + '/MCSM/';
 
 $(document).ready(function() {
-    download("http://cdn.getbukkit.org/spigot/spigot-1.16.4.jar", documents+"bukkit.jar")
+    
 })
+
+$(document).ready(function() {
+
+  const $valueSpan = $('.min-ram-span');
+  const $value = $('#min-ram');
+  $valueSpan.html($value.val()+' Mo');
+  $value.on('input change', () => {
+
+    $valueSpan.html($value.val()+ ' Mo');
+  });
+});
+
+$(document).ready(function() {
+
+  const $valueSpan = $('.max-ram-span');
+  const $value = $('#max-ram');
+  $valueSpan.html($value.val()+' Mo');
+  $value.on('input change', () => {
+
+    $valueSpan.html($value.val()+' Mo');
+  });
+});
 
 var download = function(url, dest, cb) {
     var file = fs.createWriteStream(dest);
