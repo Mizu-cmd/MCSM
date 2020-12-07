@@ -1,8 +1,3 @@
 node_modules/
 LICENSES.chromium.html
 electron.exe
-<<<<<<< HEAD
-app
-=======
-app/
->>>>>>> refs/remotes/origin/main
