@@ -37,6 +37,6 @@ app.on("ready", function(){
         }
       })
 
-    mainWindow.loadURL("file://"+__dirname+"/html/loadserver.html")
+    mainWindow.loadURL("file://"+__dirname+"/html/start.html")
     mainWindow.toggleDevTools();
 })
