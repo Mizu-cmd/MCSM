@@ -1,7 +1,6 @@
 const electron = require("electron");
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
-const {shell} = require("electron");
 const fs = require("fs");
 
 var mainWindow = null;
