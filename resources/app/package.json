@@ -6,9 +6,7 @@
     "dependencies": {
         "bootstrap": "^4.5.3",
         "jquery": "^3.5.1",
-<<<<<<< HEAD
         "mdbootstrap": "^4.19.2"
-=======
         "mdbootstrap": "^4.19.1",
         "node-pty": "^0.9.0",
         "xterm": "^4.9.0"
