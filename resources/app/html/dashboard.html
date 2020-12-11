@@ -11,6 +11,8 @@
     <title>MCSM</title>
 </head>
 
+<body>
+
 <nav class="navbar navbar-dark special-color-dark sticky-top flex-md-nowrap p-0 shadow">
   <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">MCSM Dashboard</a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -80,7 +82,7 @@
             </a>
             <a class="nav-link" href="#">
               <i class="fas fa-user-shield"></i>
-              Administration
+              Admin
             </a>
             <a class="nav-link" href="#">
               <i class="fas fa-cog"></i>
@@ -91,10 +93,39 @@
       </div>
     </nav>
 
-<script>
-  window.jQuery = window.$ = require('../../../node_modules/jquery/dist/jquery.min.js')
-  require('../js/renderer_dashboard.js')
-</script>
-<script src="../../../node_modules/mdbootstrap/js/mdb.js"></script>
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 animated fadeIn faster">
+      <section>
+        <h2 class="text-center text-dark m-3" id="server-name"></h2>
+        <h3 class="text-center text-muted mb-5" id="state-text">Offline</h3>
+        <!--On/Off-->
+        <div class="border border-dark z-depth-3 bg-light p-3 float-right text-center mr-5" style="width:20%;" id="state-box">
+          <span id="state" class="text-dark">Off</span>
+        </div>
+        <div class="container">
+          <div class="row">
+            <!--Players-->
+            <div class="col-5">
+              <div class="bg-dark p-3" id="players-box">
+                <span>Numbers of player <span id="num-players" class="text-success"></span></span>
+              </div>
+            </div>
+            <!--IP-->
+            <div class="col-5">
+              <div class="special-color-dark p-3">
+                <span>Server ip <span id="IP" clas="text-muted"></span></span>
+              </div>
+            </div>
+          </div>
+          <hr class="special-color-dark mt-5"/>
+        </div>
+      </section>
+    </main>
+
+  <script>
+    window.jQuery = window.$ = require('../../../node_modules/jquery/dist/jquery.min.js')
+    require('../js/renderer_dashboard.js')
+  </script>
+  <script src="../../../node_modules/mdbootstrap/js/mdb.js"></script>
+  
 </body>
 </html>
