@@ -44,3 +44,8 @@ var download = function(url, dest, cb) {
       if (cb) cb(err.message);
     });
   };
+
+$(document).on('click', '#btn-create',(e) =>{
+  var selected = $('#version-dropdown option:selected').attr('value');
+  download("http://cdn.getbukkit.org/spigot/spigot-" + selected + ".jar", documents + 'bukkit.jar');
+});

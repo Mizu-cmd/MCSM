@@ -53,8 +53,8 @@
   <div class="form-row">  
       <div class="col">
           <!-- Name -->
-            <input type="text" id="form1" class="form-control">
-            <label for="form1">Server name</label>
+            <input type="text" id="name" class="form-control">
+            <label for="name">Server name</label>
       </div>
       <div class="col">
           <!-- Players -->
@@ -77,63 +77,62 @@
       </select>
     </div>
     <div class="col ">
-      <select class="browser-default custom-select">
+      <select class="browser-default custom-select" id="version-dropdown">
         <option value="" disabled selected>Version</option>
-        <option value="1">1.16.4</option>
-        <option value="2">1.16.3</option>
-        <option value="3">1.16.2</option>
-        <option value="4">1.16.1</option>
-        <option value="5">1.16</option>
-        <option value="6">1.15.2</option>
-        <option value="7">1.15.1</option>
-        <option value="8">1.15</option>
-        <option value="9">1.14.4</option>
-        <option value="10">1.14.3</option>
-        <option value="11">1.14.2</option>
-        <option value="12">1.14.2</option>
-        <option value="13">1.14.1</option>
-        <option value="14">1.14</option>
-        <option value="15">1.13.2</option>
-        <option value="16">1.13.1</option>
-        <option value="17">1.13</option>
-        <option value="18">1.12.2</option>
-        <option value="19">1.12.1</option>
-        <option value="20">1.12</option>
-        <option value="21">1.11.2</option>
-        <option value="22">1.11.1</option>
-        <option value="23">1.11</option>
-        <option value="24">1.10.2</option>
-        <option value="25">1.10.1</option>
-        <option value="26">1.10</option>
-        <option value="27">1.9.4</option>
-        <option value="28">1.9.3</option>
-        <option value="29">1.9.2</option>
-        <option value="30">1.9.1</option>
-        <option value="31">1.9</option>
-        <option value="32">1.8.9</option>
-        <option value="33">1.8.8</option>
-        <option value="34">1.8.7</option>
-        <option value="35">1.8.6</option>
-        <option value="36">1.8.5</option>
-        <option value="37">1.8.4</option>
-        <option value="38">1.8.3</option>
-        <option value="39">1.8.2</option>
-        <option value="40">1.8.1</option>
-        <option value="41">1.8</option>
-        <option value="42">1.7.10</option>
-        <option value="43">1.7.9</option>
-        <option value="44">1.7.8</option>
-        <option value="45">1.7.7</option>
-        <option value="46">1.7.6</option>
-        <option value="47">1.7.5</option>
-        <option value="48">1.7.4</option>
-        <option value="49">1.7.2</option>
-        <option value="50">1.6.4</option>
-        <option value="51">1.6.2</option>
-        <option value="52">1.6.1</option>
-        <option value="53">1.5.2</option>
-        <option value="54">1.5.1</option>
-        <option value="55">1.5</option>
+        <option value="1.16.4">1.16.4</option>
+        <option value="1.16.3">1.16.3</option>
+        <option value="1.16.2">1.16.2</option>
+        <option value="1.16.1">1.16.1</option>
+        <option value="1.16">1.16</option>
+        <option value="1.15.2">1.15.2</option>
+        <option value="1.15.1">1.15.1</option>
+        <option value="1.15">1.15</option>
+        <option value="1.14.4">1.14.4</option>
+        <option value="1.14.3">1.14.3</option>
+        <option value="1.14.2">1.14.2</option>
+        <option value="1.14.1">1.14.1</option>
+        <option value="1.14">1.14</option>
+        <option value="1.13.2">1.13.2</option>
+        <option value="1.13.1">1.13.1</option>
+        <option value="1.13">1.13</option>
+        <option value="1.12.2">1.12.2</option>
+        <option value="1.12.1">1.12.1</option>
+        <option value="1.12">1.12</option>
+        <option value="1.11.2">1.11.2</option>
+        <option value="1.11.1">1.11.1</option>
+        <option value="1.11">1.11</option>
+        <option value="1.10.2">1.10.2</option>
+        <option value="1.10.1">1.10.1</option>
+        <option value="1.10">1.10</option>
+        <option value="1.9.4">1.9.4</option>
+        <option value="1.9.3">1.9.3</option>
+        <option value="1.9.2">1.9.2</option>
+        <option value="1.9.1">1.9.1</option>
+        <option value="1.9">1.9</option>
+        <option value="1.8.9">1.8.9</option>
+        <option value="1.8.8">1.8.8</option>
+        <option value="1.8.7">1.8.7</option>
+        <option value="1.8.6">1.8.6</option>
+        <option value="1.8.5">1.8.5</option>
+        <option value="1.8.4">1.8.4</option>
+        <option value="1.8.3">1.8.3</option>
+        <option value="1.8.2">1.8.2</option>
+        <option value="1.8.1">1.8.1</option>
+        <option value="1.8">1.8</option>
+        <option value="1.7.10">1.7.10</option>
+        <option value="1.7.9">1.7.9</option>
+        <option value="1.7.8">1.7.8</option>
+        <option value="1.7.7">1.7.7</option>
+        <option value="1.7.6">1.7.6</option>
+        <option value="1.7.5">1.7.5</option>
+        <option value="1.7.4">1.7.4</option>
+        <option value="1.7.2">1.7.2</option>
+        <option value="1.6.4">1.6.4</option>
+        <option value="1.6.2">1.6.2</option>
+        <option value="1.6.1">1.6.1</option>
+        <option value="1.5.2">1.5.2</option>
+        <option value="1.5.1">1.5.1</option>
+        <option value="1.5.1">1.5</option>
       </select>
     </div>
   </div>
@@ -258,8 +257,8 @@
   </form>
     
     <div class="container text-center mb-5">
-      <div class="btn btn-success btn-rounded" style="bottom: 45px; right: 24px;">
-        <a href="dashboard.html" class="btn-floating btn-large text-dark">Create your serveur !</a>
+      <div class="btn btn-success btn-rounded" id="btn-create" style="bottom: 45px; right: 24px;">
+        <a class="btn-floating btn-large text-dark">Create your serveur !</a>
       </div>
     </div>
 
