@@ -53,8 +53,8 @@
   <div class="form-row">  
       <div class="col">
           <!-- Name -->
-            <input type="text" id="form1" class="form-control">
-            <label for="form1">Server name</label>
+            <input type="text" id="name" class="form-control">
+            <label for="name">Server name</label>
       </div>
       <div class="col">
           <!-- Players -->
@@ -69,18 +69,18 @@
     <div class="col">
       <select class="browser-default custom-select">
         <option value="" disabled selected>Server version</option>
-        <option value="1">Spigot</option>
-        <option value="2">Bukkit</option>
-        <option value="3">Sponge</option>
-        <option value="3">Forge</option>
-        <option value="3">Spongeforge</option>
+        <option value="spigot">Spigot</option>
+        <option value="bukkit">Bukkit</option>
+        <option value="sponge">Sponge</option>
+        <option value="forge">Forge</option>
+        <option value="spongeforge">Spongeforge</option>
       </select>
     </div>
     <div class="col ">
-      <select class="browser-default custom-select">
+      <select class="browser-default custom-select" id="version-dropdown">
         <option value="" disabled selected>Version</option>
-        <option value="1">1.16.4</option>
-        <option value="2">1.16.3</option>
+        <option value="1.16.4">1.16.4</option>
+        <option value="1.16.3">1.16.3</option>
         <option value="3">1.16.2</option>
         <option value="4">1.16.1</option>
         <option value="5">1.16</option>
@@ -258,7 +258,7 @@
   </form>
     
     <div class="container text-center mb-5">
-      <div class="btn btn-success btn-rounded" style="bottom: 45px; right: 24px;">
+      <div class="btn btn-success btn-rounded" id="btn-create" style="bottom: 45px; right: 24px;">
         <a href="dashboard.html" class="btn-floating btn-large text-dark">Create your serveur !</a>
       </div>
     </div>

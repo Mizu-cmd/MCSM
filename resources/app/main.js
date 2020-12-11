@@ -29,14 +29,13 @@ var ptyProcess = pty.spawn(shell, [], {
 
 app.on("ready", function(){
     const mainWindow = new BrowserWindow({
-        width: 1024,
-        height: 480,
+        width: 1100,
+        height: 600,
         autoHideMenuBar: true,
         useContentSize: true,
         transparent: false,
         frame: true,
-        minWidth: 1024,
-        minHeight: 480,
+        resizable: false,
         webPreferences: {
             nodeIntegration: true,
             enableRemoteModule: true,
@@ -51,11 +50,7 @@ app.on("ready", function(){
         }
       })
 
-<<<<<<< HEAD
     mainWindow.loadURL("file://"+__dirname+'/html/loadserver.html')
-=======
-    mainWindow.loadURL("file://"+__dirname+"/html/start.html")
->>>>>>> refs/remotes/origin/main
     mainWindow.toggleDevTools();
 
     ptyProcess.on('data', function(data) {
