@@ -32,8 +32,8 @@ fs.readdir(documents + '/MCSM/', function (err, files){
     })
 })
 
-$('.btn-launch').on('click', () => {
-  launch()
+$(document).on('click', '.btn-launch',(e) => {
+  launch($(e.target).attr('server'))
 });
 $(document).on('click', '.btn-rename',(e) => {
   rename(documents + '/MCSM/'+$(e.target).attr('server'), e)
@@ -55,7 +55,9 @@ $(document).on('click', '.btn-delete',(e) => {
   });
 });
 
-function launch(file){
+function launch(target){
+  remote.getGlobal('sharedObject').server = target;
+  window.location = 'dashboard.html'
 }
 
 function rename(oldFile, e){
@@ -72,6 +74,7 @@ function rename(oldFile, e){
             console.log(err);
             return;
           }
+          remote.getGlobal('sharedObject').server = $(e.target).attr('server');
           location.reload();
         });
     }

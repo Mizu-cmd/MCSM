@@ -7,14 +7,16 @@
     <link rel="stylesheet" type="text/css" href="../../../node_modules/mdbootstrap/css/mdb.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/dashboard.css">
+
     <script src="https://kit.fontawesome.com/6e9a4a2576.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../../../node_modules/xterm/css/xterm.css" />
+    <script src="../../../node_modules/xterm/lib/xterm.js"></script>
     <title>MCSM</title>
 </head>
 
-<body>
-
 <nav class="navbar navbar-dark special-color-dark sticky-top flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-2" href="loadserver.html">MCSM</a>
+  <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">MCSM Dashboard</a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -37,7 +39,7 @@
       <div class="sidebar-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item align-content-center">
-            <a class="nav-link active" href="#">
+            <a class="nav-link active" href="dashboard.html">
               <i class="fas fa-home"></i>
               Home<span class="sr-only">(current)</span>
             </a>
@@ -53,7 +55,7 @@
               <i class="fas fa-globe-asia"></i>
               Worlds
             </a>
-            <a class="nav-link" href="dashboard-terminal.html">
+            <a class="nav-link" href="#">
               <i class="fas fa-terminal"></i>
               Terminal
             </a>
@@ -82,7 +84,7 @@
             </a>
             <a class="nav-link" href="#">
               <i class="fas fa-user-shield"></i>
-              Admin
+              Administration
             </a>
             <a class="nav-link" href="#">
               <i class="fas fa-cog"></i>
@@ -93,39 +95,18 @@
       </div>
     </nav>
 
-    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 animated fadeIn faster">
-      <section>
-        <h2 class="text-center text-dark m-3" id="server-name"></h2>
-        <h3 class="text-center text-muted mb-5" id="state-text">Offline</h3>
-        <!--On/Off-->
-        <div class="border border-dark z-depth-3 bg-light p-3 float-right text-center mr-5" style="width:20%;" id="state-box">
-          <span id="state" class="text-dark">Off</span>
-        </div>
-        <div class="container">
-          <div class="row">
-            <!--Players-->
-            <div class="col-5">
-              <div class="bg-dark p-3" id="players-box">
-                <span>Numbers of player <span id="num-players" class="text-success"></span></span>
-              </div>
-            </div>
-            <!--IP-->
-            <div class="col-5">
-              <div class="special-color-dark p-3">
-                <span>Server ip <span id="IP" clas="text-muted"></span></span>
-              </div>
-            </div>
-          </div>
-          <hr class="special-color-dark mt-5"/>
-        </div>
-      </section>
+    <!--content-->
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+      <h2 class="text-dark text-center mt-5">Terminal</h2>
+      <div class="container-fluid" id="terminal-container">
+        <div class="m-5 shadow-lg z-depth-5" id="terminal"></div>
+      </div>
     </main>
 
-  <script>
-    window.jQuery = window.$ = require('../../../node_modules/jquery/dist/jquery.min.js')
-    require('../js/renderer_dashboard.js')
-  </script>
-  <script src="../../../node_modules/mdbootstrap/js/mdb.js"></script>
-  
+<script>
+  window.jQuery = window.$ = require('../../../node_modules/jquery/dist/jquery.min.js')
+  require('../js/renderer_dashboard_terminal.js')
+</script>
+<script src="../../../node_modules/mdbootstrap/js/mdb.js"></script>
 </body>
 </html>
