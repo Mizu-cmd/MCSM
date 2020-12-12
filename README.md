@@ -1,5 +1,3 @@
-# MCSM
-
 ![MCSM](https://github.com/Mizu-cmd/MCSM/blob/main/images/logo_1.png?raw=true)
 
 **Create, manage and control yours Minecraft server with MCSM**
