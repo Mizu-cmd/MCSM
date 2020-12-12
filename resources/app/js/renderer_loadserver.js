@@ -4,6 +4,8 @@ const { remote } = require('electron');
 const app = remote.app;
 const { dialog } = require('electron').remote
 
+const ipc = require("electron").ipcRenderer;
+
 let documents = app.getPath('documents');
 
 $(document).ready(function(){
@@ -57,6 +59,8 @@ $(document).on('click', '.btn-delete',(e) => {
 
 function launch(target){
   remote.getGlobal('sharedObject').server = target;
+  ipc.send("terminal.keystroke",'cd ' + documents + '/MCSM/' + target+'\r');
+  ipc.send("terminal.keystroke",'clear\r');
   window.location = 'dashboard.html'
 }
 

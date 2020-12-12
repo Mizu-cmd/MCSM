@@ -7,16 +7,13 @@
     "electron-rebuild": "^2.3.4"
   },
   "dependencies": {
-<<<<<<< HEAD
     "electron": "^11.0.4",
     "electron-store": "^6.0.1",
     "ip": "^1.1.5",
-=======
->>>>>>> refs/remotes/origin/main
     "jquery": "^3.5.1",
     "mdbootstrap": "^4.19.2",
-    "electron": "^11.0.4",
     "node-pty": "^0.9.0",
-    "xterm": "^4.9.0"
+    "xterm": "^4.9.0",
+    "xterm-addon-fit": "^0.4.0"
   }
 }

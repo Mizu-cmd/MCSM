@@ -1,7 +1,10 @@
 const { remote } = require('electron');
 var server = remote.getGlobal('sharedObject').server;
 var ip = require('../../../node_modules/ip');
-var http = require('http');
+var cp = require("child_process");
+const app = remote.app;
+
+let documents = app.getPath('documents');
 
 $('#server-name').text(server)
 
@@ -38,3 +41,16 @@ function copyToClipboard(element) {
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip()
 })
+
+$(document).ready(function(){
+    $('#search').on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $('[role=main] div').filter(function() {
+          if (!($(this).text().toLowerCase().indexOf(value) > -1)){
+            $(this).css('opacity', 0.5)
+          } else{
+            $(this).css('opacity', 1)
+          }
+      });
+    });
+  });

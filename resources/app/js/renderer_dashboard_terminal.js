@@ -1,5 +1,5 @@
 const ipc = require("electron").ipcRenderer;
-const { FitAddon } = require("../../../node_modules/xterm-addon-fit");
+const { FitAddon } = require('../../../node_modules/xterm-addon-fit');
 
 const { remote } = require('electron');
 const app = remote.app;
@@ -18,15 +18,11 @@ term.loadAddon(fitAddon);
 term.open(document.getElementById('terminal'));
 fitAddon.fit();
 
-if(remote.getGlobal('sharedObject').server == null) {
-    ipc.send("terminal.keystroke",'cd ' + documents + '/MCSM/' + remote.getGlobal('sharedObject').server+'\r');
-    ipc.send("terminal.keystroke",'clear\r');
-} else {
-    ipc.send("terminal.keystroke",'\r');
-}
+ipc.send("terminal.keystroke",'\r');
+
 
 $(document).on('click', 'a', (e) => {
-    
+
 })
 
 ipc.on("terminal.incomingData", (event, data) => {
