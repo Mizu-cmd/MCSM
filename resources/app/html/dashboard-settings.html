@@ -7,20 +7,18 @@
     <link rel="stylesheet" type="text/css" href="../../../node_modules/mdbootstrap/css/mdb.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/dashboard.css">
-
     <script src="https://kit.fontawesome.com/6e9a4a2576.js" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="../../../node_modules/xterm/css/xterm.css" />
-    <script src="../../../node_modules/xterm/lib/xterm.js"></script>
     <title>MCSM</title>
 </head>
+
+<body>
 
 <nav class="navbar navbar-dark special-color-dark sticky-top flex-md-nowrap p-0 shadow">
   <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="loadserver.html">MCSM Dashboard</a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <input class="form-control form-control-dark w-100 rounded-right" type="text" placeholder="Search" aria-label="Search">
+  <input class="form-control form-control-dark w-100 rounded-right" type="text" placeholder="Search" aria-label="Search" id="search">
   <ul class="navbar-nav px-3">
     <li class="nav-item text-nowrap">
       <a class="nav-link" href="#">Sign in</a>
@@ -48,7 +46,7 @@
               <span>Server</span>
             </a>
             <a class="nav-link" href="dashboard-player.html">
-              <i class="fas fa-user-friends"></i>
+              <i class="fas fa-users"></i>
               <span>Players</span>
             </a>
             <a class="nav-link" href="dashboard-world.html">
@@ -88,7 +86,7 @@
             </a>
             <a class="nav-link" href="dashboard-admin.html">
               <i class="fas fa-user-shield"></i>
-              Administration
+              Admin
             </a>
             <a class="nav-link" href="dashboard-settings.html">
               <i class="fas fa-cog"></i>
@@ -103,19 +101,15 @@
       </div>
     </nav>
 
-    <!--content-->
-    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 animated fadeIn fast">
-      <h2 class="text-dark text-center mt-5">Terminal</h2>
-      <div class="container-fluid" id="terminal-container">
-        <div class="shadow-lg z-depth-5" id="terminal"></div>
-      </div>
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 animated fadeIn">
     </main>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.10.1/umd/popper.min.js"></script>  
 
-<script>
-  window.jQuery = window.$ = require('../../../node_modules/jquery/dist/jquery.min.js')
-  require('../js/renderer_dashboard_terminal.js')
-</script>
-<script src="../../../node_modules/mdbootstrap/js/mdb.js"></script>
-<script>require('../js/common.js')</script>
+  <script>window.jQuery = window.$ = require('../../../node_modules/jquery/dist/jquery.min.js')</script>
+  <script src="../../../node_modules/mdbootstrap/js/mdb.js"></script>
+  <script src="../../../node_modules/mdbootstrap/js/bootstrap.min.js"></script>
+  
+  <script>require('../js/renderer_dashboard.js')</script>
 </body>
 </html>

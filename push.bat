@@ -1,5 +1,4 @@
-git fetch
-git merge
+git pull
 git status
 pause
 git add .
