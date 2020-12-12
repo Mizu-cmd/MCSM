@@ -1,10 +1,10 @@
 const { remote } = require('electron');
 var server = remote.getGlobal('sharedObject').server;
-var ip = require('../../../node_modules/ip');
 var cp = require("child_process");
 const app = remote.app;
 
 let documents = app.getPath('documents');
+
 
 $('#server-name').text(server)
 
@@ -14,7 +14,7 @@ $('#state-box').hover(function(){
     $('#state').text('Off');
 });
 
-$('#ip').text(ip.address())
+$('#ip').text('adrress')
 $('#num-players').text('4/50');
 
 $(document).on('click', '#ip-box', (e) =>{
