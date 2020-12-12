@@ -32,20 +32,22 @@ $(document).ready(function() {
   });
 });
 
-var download = function(url, dest, cb) {
-    var file = fs.createWriteStream(dest);
-    var request = http.get(url, function(response) {
-      response.pipe(file);
-      file.on('finish', function() {
-        file.close(cb);  // close() is async, call cb after close completes.
-      });
-    }).on('error', function(err) { // Handle errors
-      fs.unlink(dest); // Delete the file async. (But we don't check the result)
-      if (cb) cb(err.message);
+const url = 'http://cdn.getbukkit.org/spigot/spigot-1.16.4.jar'; // link to file you want to download
+const path = documents + 'bukkit.jar'; // where to save a file
+
+const request = http.get(url, function(response) {
+    if (response.statusCode === 200) {
+        console.log('work')
+        var file = fs.createWriteStream(path);
+        response.pipe(file);
+    }
+    request.setTimeout(60000, function() { // if after 60s file not downlaoded, we abort a request 
+        request.abort();
     });
-  };
+});
 
 $(document).on('click', '#btn-create',(e) =>{
   var selected = $('#version-dropdown option:selected').attr('value');
-  download("http://cdn.getbukkit.org/spigot/spigot-" + selected + ".jar", documents + 'bukkit.jar');
+  //download("http://cdn.getbukkit.org/spigot/spigot-" + selected + ".jar", documents + 'bukkit.jar');
 });
+

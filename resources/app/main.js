@@ -51,19 +51,8 @@ app.on("ready", function(){
         }
       })
 
-<<<<<<< HEAD
+
     mainWindow.loadURL("file://"+__dirname+'/html/loadserver.html')
-=======
-<<<<<<< HEAD
-    mainWindow.loadURL("file://"+__dirname+"/html/loadserver.html")
-=======
-<<<<<<< HEAD
-    mainWindow.loadURL("file://"+__dirname+'/html/loadserver.html')
-=======
-    mainWindow.loadURL("file://"+__dirname+"/html/start.html")
->>>>>>> refs/remotes/origin/main
->>>>>>> refs/remotes/origin/main
->>>>>>> refs/remotes/origin/main
     mainWindow.toggleDevTools();
 
     ptyProcess.on('data', function(data) {
