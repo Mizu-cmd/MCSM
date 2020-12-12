@@ -18,8 +18,16 @@ term.loadAddon(fitAddon);
 term.open(document.getElementById('terminal'));
 fitAddon.fit();
 
-ipc.send("terminal.keystroke",'cd ' + documents + '/MCSM/' + remote.getGlobal('sharedObject').server);
+if(remote.getGlobal('sharedObject').server == null) {
+    ipc.send("terminal.keystroke",'cd ' + documents + '/MCSM/' + remote.getGlobal('sharedObject').server+'\r');
+    ipc.send("terminal.keystroke",'clear\r');
+} else {
+    ipc.send("terminal.keystroke",'\r');
+}
 
+$(document).on('click', 'a', (e) => {
+    
+})
 
 ipc.on("terminal.incomingData", (event, data) => {
     term.write(data);
@@ -27,5 +35,4 @@ ipc.on("terminal.incomingData", (event, data) => {
 
 term.onData(e => {
     ipc.send("terminal.keystroke", e);
-    console.log(e)
 });
