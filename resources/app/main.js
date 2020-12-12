@@ -50,6 +50,10 @@ app.on("ready", function(){
         }
       })
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/main
     mainWindow.loadURL("file://"+__dirname+'/html/loadserver.html')
     mainWindow.toggleDevTools();
 
