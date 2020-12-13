@@ -63,7 +63,7 @@ function launch(target){
     remote.getGlobal('sharedObject').version = JSON.parse(data).version;
   });
   remote.getGlobal('sharedObject').server = target;
-  ipc.send("terminal.keystroke",'cd ' + documents + '/MCSM/' + target+'\r');
+  ipc.send("terminal.keystroke",'cd "' + documents + '/MCSM/' + target+'"\r');
   ipc.send("terminal.keystroke",'clear\r');
   window.location = 'dashboard.html';
 }
