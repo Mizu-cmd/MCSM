@@ -19,3 +19,26 @@ $('[data-toggle="popover-hover"]').popover({
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip()
 })
+
+$(document).ready(function() {
+
+    const $valueSpan = $('.min-ram-span');
+    const $value = $('#min-ram');
+    $valueSpan.html($value.val()+' Mo');
+    $value.on('input change', () => {
+  
+      $valueSpan.html($value.val()+ ' Mo');
+    });
+  });
+  
+  $(document).ready(function() {
+  
+    const $valueSpan = $('.max-ram-span');
+    const $value = $('#max-ram');
+    $valueSpan.html($value.val()+' Mo');
+    $value.on('input change', () => {
+  
+      $valueSpan.html($value.val()+' Mo');
+    });
+  });
+  

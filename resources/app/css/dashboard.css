@@ -140,3 +140,13 @@ body {
   transform: scale(1.05);
   cursor: pointer;
 }
+
+input[type=range]::-webkit-slider-thumb {
+  background: #263238;
+}
+input[type=range]::-moz-range-thumb {
+  background: #263238;
+}
+input[type=range]::-ms-thumb {
+  background: #263238;
+}

@@ -108,7 +108,7 @@
     </br>
       <div class="container">
         <div class="row">
-            <div class="text-center col p-3 m-3 shadow-lg z-depth-3" style="background-color:#3e515b;" id="modt">
+            <div class="text-center col p-3 m-3 shadow-lg z-depth-3 rounded" style="background-color:#3e515b;" id="modt">
               <span class="font-weight-bold" data-toggle="popover-hover" data-img="https://minecraft.tools/fr/css/img/index/motd.jpg" title="<span class='text-dark'>MOTD Exemple</span>">MODT
                 <input type="text" id="modt" class="form-control mt-2">
               </span>
@@ -120,6 +120,7 @@
       
       <div class="container text-dark">
         <h1 class="text-center text-dark font-weight-bold h3">Generals</h1>
+      </br>
         <div class="row">
           <div class="col">
             <div id="default_gamemode">
@@ -181,24 +182,54 @@
           <div class="col">
             <div class="custom-control custom-switch">
               <input type="checkbox" class="custom-control-input" id="villager" checked>
-              <label class="custom-control-label interact" for="villager" data-toggle="tooltip" title="Spawn villager?">Spawn villager</label>
+              <label class="custom-control-label interact" for="villager" data-toggle="tooltip" title="Spawn villager ?">Spawn villager</label>
             </div>
           </div>
           <div class="col">
             <div class="custom-control custom-switch">
               <input type="checkbox" class="custom-control-input" id="animals" checked>
-              <label class="custom-control-label interact" for="animals" data-toggle="tooltip" title="Spawn animals?">Spawn animals</label>
+              <label class="custom-control-label interact" for="animals" data-toggle="tooltip" title="Spawn animals ?">Spawn animals</label>
             </div>
           </div>
           <div class="col">
             <div class="custom-control custom-switch">
               <input type="checkbox" class="custom-control-input" id="monsters" checked>
-              <label class="custom-control-label interact" for="monsters" data-toggle="tooltip" title="Spawn monsters?">Spawn monsters</label>
+              <label class="custom-control-label interact" for="monsters" data-toggle="tooltip" title="Spawn monsters ?">Spawn monsters</label>
             </div>
           </div>
         </div>
+      </br>
+      </br>
+        <p class="h6">Max players</p>
+        <input type="number" id="max-players" class="form-control" value="20" onkeydown="javascript: return event.keyCode == 69 ? false : true">
         <hr class="text-muted mt-5"/>
       </div>
+      <div class="container text-center text-dark">
+        <h1 class="h3 font-weight-bold">Other</h1>
+      </br>
+        <div class="row">
+          <div class="col">
+            <a class="h5">Max RAM</a>
+            <div class="d-flex justify-content-center my-4">
+              <div class="w-75">
+                <input type="range" class="custom-range" id="min-ram" min="500" max="32000" value="512" data-toggle="tooltip" title="Set the minimun ram of your server">
+              </div>
+              <span class="font-weight-bold text-dark ml-2 min-ram-span"></span>
+            </div>
+          </div>
+          <div class="col">
+            <a class="h5">Min RAM</a>
+            <div class="d-flex justify-content-center my-4">
+              <div class="w-75">
+                <input type="range" class="custom-range" id="max-ram" min="500" max="32000" value="512" data-toggle="tooltip" title="Set the maximum ram of your server">
+              </div>
+              <span class="font-weight-bold text-dark ml-2 max-ram-span"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </br>
+    </br>
     </main>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.10.1/umd/popper.min.js"></script>  
