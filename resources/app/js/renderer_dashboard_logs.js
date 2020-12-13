@@ -23,9 +23,4 @@ async function processLineByLine() {
     $("html, body").animate({ scrollTop: $(document).height() }, 1000);
 });
   
-  processLineByLine();
-
-  $(window).on('load',function() {
-    console.log('loaded')
-    $('body').css('opacity', 1)
-});
+processLineByLine();

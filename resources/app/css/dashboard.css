@@ -1,13 +1,23 @@
 body {
   font-size: .875rem;
-  opacity: 0;
 }
 
-.feather {
-  width: 16px;
-  height: 16px;
-  vertical-align: text-bottom;
-}
+::-webkit-scrollbar {
+  width: 13px;
+  height: 13px;
+ }
+ ::-webkit-scrollbar-thumb {
+  background: #263238;
+  border-radius: 0px;
+ }
+ ::-webkit-scrollbar-thumb:hover{
+  background: #37474F;
+ }
+ ::-webkit-scrollbar-track{
+  background: #ffffff;
+  border-radius: 0px;
+  box-shadow: inset 7px 10px 12px #f0f0f0;
+ }
 
 /*
  * Sidebar
@@ -61,7 +71,7 @@ body {
 
 .sidebar .nav-link:hover {
   color: inherit;
-  margin-left: 15px;
+  transform: translateX(15px);
 }
 
 .sidebar-heading {
