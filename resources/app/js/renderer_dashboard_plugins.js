@@ -1,4 +1,5 @@
 const { remote } = require('electron');
+var server = remote.getGlobal('sharedObject').server;
 const fs = require('fs');
 var http = require('http');
 
@@ -21,25 +22,24 @@ response.on('data', function (chunk) {
 //the whole response has been received, so we just print it out here
 response.on('end', function () {
     let value = JSON.parse(str);
-    for (i in value)
-    $('#plugins').append('<br/><span id= href=https://www.spigotmc.org/'+value[i].file.url+'>'+value[i].name+'</span>');
-});
+    for (i in value){
+        $('#plugins').append(
+            '<tr><th>'+value[i].name+'</th></tr>'
+            );
+        }
+    });
 }
 
-http.request(options, callback).end();
+$(document).on('click', '.plugin-link', (e) =>{
 
-const url = 'http://www.spigotmc.org/resources/quickshop-reremake-1-16-ready-say-hello-with-rgb.62575/download?version=371816'; // link to file you want to download
-const path = documents+'/plugin.jar' // where to save a file
+    const url = 'http://api.spiget.org/v2/resources/'+$(e.target).attr('id')+'/download'; // link to file you want to download
+    const path = documents+'/MCSM/'+$(e.target).text().toLowerCase().replace(/[^a-zA-Z0-9]/g, "") + '/'+server+'.jar';
 
-const request = http.get(url, function(response) {
-    if (response.statusCode === 200) {
+    const request = http.get(url, function(response) {
         var file = fs.createWriteStream(path);
-        console.log('200');
         response.pipe(file);
-    } else{
-        console.log(response.statusCode);
-    }
-    request.setTimeout(60000, function() { // if after 60s file not downlaoded, we abort a request 
-        request.abort();
+        return;
     });
 });
+
+http.request(options, callback).end();

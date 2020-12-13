@@ -12,7 +12,8 @@ var mainWindow = null;
 let dir = app.getPath('documents') + '/MCSM/';
 
 global.sharedObject = {
-    server: ''
+    server: '',
+    version: ''
   }
 
 app.on("window-all-closed", function(){

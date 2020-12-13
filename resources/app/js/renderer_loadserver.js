@@ -58,10 +58,14 @@ $(document).on('click', '.btn-delete',(e) => {
 });
 
 function launch(target){
+  var properties = fs.readFile(documents+'/MCSM/'+target+'/mcsm.json', (err, data) =>{
+    if (err) throw err;
+    remote.getGlobal('sharedObject').version = JSON.parse(data).version;
+  });
   remote.getGlobal('sharedObject').server = target;
   ipc.send("terminal.keystroke",'cd ' + documents + '/MCSM/' + target+'\r');
   ipc.send("terminal.keystroke",'clear\r');
-  window.location = 'dashboard.html'
+  window.location = 'dashboard.html';
 }
 
 function rename(oldFile, e){
