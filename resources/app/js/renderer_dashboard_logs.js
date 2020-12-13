@@ -24,3 +24,8 @@ async function processLineByLine() {
 });
   
   processLineByLine();
+
+  $(window).on('load',function() {
+    console.log('loaded')
+    $('body').css('opacity', 1)
+});

@@ -51,3 +51,8 @@ $(document).on('click', '#btn-create',(e) =>{
   //download("http://cdn.getbukkit.org/spigot/spigot-" + selected + ".jar", documents + 'bukkit.jar');
 });
 
+$(window).on('load',function() {
+  console.log('loaded')
+  $('body').css('opacity', 1)
+});
+
