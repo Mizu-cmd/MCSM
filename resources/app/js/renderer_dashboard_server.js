@@ -15,3 +15,7 @@ $('[data-toggle="popover-hover"]').popover({
     placement: 'bottom',
     content: function () { return '<img src="' + $(this).data('img') + '" />'; }
   });
+
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip()
+})

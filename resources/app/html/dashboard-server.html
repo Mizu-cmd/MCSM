@@ -118,14 +118,14 @@
       
       <hr class="special-color-dark mt-5"/>
       
-      <div class="container">
+      <div class="container text-dark">
+        <h1 class="text-center text-dark font-weight-bold h3">Generals</h1>
         <div class="row">
           <div class="col">
-            <div class="text-dark" id="default_gamemode">
+            <div id="default_gamemode">
               <p class="text-center h5">Gamemode</p>
-              <select class="browser-default custom-select">
-                <option selected>Default gamemode</option>
-                <option value="Survival">Survival</option>
+              <select class="browser-default custom-select" data-toggle="tooltip" title="Choose your default gamemode">
+                <option value="Survival" selected>Survival</option>
                 <option value="Adventure">Adventure</option>
                 <option value="Creative">Creative</option>
                 <option value="Spectator">Spectator</option>
@@ -133,12 +133,71 @@
             </div>
           </div>
           <div class="col">
-            <div class="text-dark">
-              <input type="number" id="num-players" class="form-control">
-              <label for="num-players">Number of players</label>
-              </div>
+            <div id="difficulty">
+              <p class="text-center h5">Difficulty</p>
+              <select class="browser-default custom-select" data-toggle="tooltip" title="Choose your difficulty">
+                <option value="Survival">Peaceful</option>
+                <option value="Adventure">Easy</option>
+                <option value="Creative" selected>Normal</option>
+                <option value="Spectator">Hard</option>
+              </select>
+            </div>
+            </div>
+        </div>
+      </div>
+      </br>
+    </br>
+      <div class="container text-dark text-center h6">
+        <div class="row">
+          <div class="col">
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="pvp" checked>
+              <label class="custom-control-label interact" for="pvp" data-toggle="tooltip" title="Enable or disable PVP in server">PVP</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="online-mod">
+              <label class="custom-control-label interact" for="online-mod" data-toggle="tooltip" title="Allow crack on your server">Online mod</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="force-gamemode">
+              <label class="custom-control-label interact" for="force-gamemode" data-toggle="tooltip" title="Force gamemode on your server">Force gamemode</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="hardcore">
+              <label class="custom-control-label interact" for="hardcore" data-toggle="tooltip" title="Enable or disable hardcore in your server">Hardcore</label>
+            </div>
           </div>
         </div>
+      <hr class="text-muted mt-5"/>
+      <h1 class="text-dark text-center h3 font-weight-bold">Entities</h1>
+      </br>
+        <div class="row">
+          <div class="col">
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="villager" checked>
+              <label class="custom-control-label interact" for="villager" data-toggle="tooltip" title="Spawn villager?">Spawn villager</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="animals" checked>
+              <label class="custom-control-label interact" for="animals" data-toggle="tooltip" title="Spawn animals?">Spawn animals</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="monsters" checked>
+              <label class="custom-control-label interact" for="monsters" data-toggle="tooltip" title="Spawn monsters?">Spawn monsters</label>
+            </div>
+          </div>
+        </div>
+        <hr class="text-muted mt-5"/>
       </div>
     </main>
   
