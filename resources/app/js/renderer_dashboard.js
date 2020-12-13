@@ -16,6 +16,7 @@ $('#state-box').hover(function(){
 
 $('#ip').text('adrress')
 $('#num-players').text('4/50');
+$('#mc-version').text(remote.getGlobal('sharedObject').version)
 
 $(document).on('click', '#ip-box', (e) =>{
     copyToClipboard($('#ip'));
