@@ -1,5 +1,5 @@
 function transitionToPage(url){
-    $("body").fadeOut(100,function(){
+    $("body").fadeOut(1000,function(){
         window.location.href = url;
     })
 }

@@ -102,13 +102,15 @@
     </nav>
 
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 animated fadeIn">
-      <p class="text-center text-dark font-weight-bold h2 p-2 mt-4">Settings</p>
+      <p class="text-center text-dark font-weight-bold h2 p-2 mt-4">Settings 
+        <i class="fas fa-folder-open float-right interact" id="open-folder" data-toggle="tooltip" title="Open server folder"></i>
+      </p>
     </br>
       <div class="container">
         <div class="row">
             <div class="text-center col p-3 m-3 shadow-lg z-depth-3" style="background-color:#3e515b;" id="modt">
-              <a class="font-weight-bold">MODT
-                <input type="text" id="form1" class="form-control mt-2">
+              <a class="font-weight-bold" data-toggle="popover" title="MODT exemple" data-img="../css/img/modt.png">MODT
+                <input type="text" id="modt" class="form-control mt-2">
               </a>
           </div>
         </div>
@@ -119,9 +121,9 @@
       <div class="container">
         <div class="row">
           <div class="col">
-            <div class="" style="background-color: #3e515b;" id="default_gamemode">
-              <p class="text-center">Gamemode</p>
-              <select class="browser-default custom-select col-8">
+            <div class="text-dark" id="default_gamemode">
+              <p class="text-center h5">Gamemode</p>
+              <select class="browser-default custom-select">
                 <option selected>Default gamemode</option>
                 <option value="Survival">Survival</option>
                 <option value="Adventure">Adventure</option>
@@ -129,6 +131,12 @@
                 <option value="Spectator">Spectator</option>
               </select>
             </div>
+          </div>
+          <div class="col">
+            <div class="text-dark">
+              <input type="number" id="num-players" class="form-control">
+              <label for="num-players">Number of players</label>
+              </div>
           </div>
         </div>
       </div>
@@ -140,6 +148,8 @@
   <script src="../../../node_modules/mdbootstrap/js/mdb.js"></script>
   <script src="../../../node_modules/mdbootstrap/js/bootstrap.min.js"></script>
   
-  <script>require('../js/renderer_dashboard.js')</script>
+  <script>require('../js/renderer_dashboard_server.js')</script>
+  <script>require('../js/common.js')</script>
+
 </body>
 </html>

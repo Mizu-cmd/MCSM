@@ -121,3 +121,13 @@ body {
 #state-box:hover span{
   color: white !important;
 }
+
+.interact{
+  transition: 0.24s;
+}
+
+
+.interact:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+}
