@@ -9,11 +9,9 @@ $('#open-folder').on('click', function(){
     require('child_process').exec('start "" "'+documents+'/MCSM/'+server+'" ');
 })
 
-$(document).ready(function(){
-    $('[data-toggle="popover"]').popover({
-        placement : 'top',
-        trigger : 'hover',
-        html : true,
-        container: 'body'
-    });
-});
+$('[data-toggle="popover-hover"]').popover({
+    html: true,
+    trigger: 'hover',
+    placement: 'bottom',
+    content: function () { return '<img src="' + $(this).data('img') + '" />'; }
+  });
