@@ -8,8 +8,6 @@
   },
   "dependencies": {
     "electron": "^11.0.4",
-    "electron-store": "^6.0.1",
-    "ip": "^1.1.5",
     "jquery": "^3.5.1",
     "mdbootstrap": "^4.19.2",
     "node-pty": "^0.9.0",

@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/dashboard.css">
     <script src="https://kit.fontawesome.com/6e9a4a2576.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../external/animsition/css/animsition.min.css">
     <title>MCSM</title>
 </head>
 
@@ -80,7 +82,7 @@
               <i class="fas fa-chart-bar"></i>
               Statistics
             </a>
-            <a class="nav-link" onclick="transitionToPage('dashboard-logs.html')">
+            <a class="nav-link" href="dashboard-logs.html">
               <i class="fas fa-scroll"></i>
               Logs
             </a>
@@ -169,9 +171,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.10.1/umd/popper.min.js"></script>  
 
   <script>window.jQuery = window.$ = require('../../../node_modules/jquery/dist/jquery.min.js')</script>
+
+  <script src="../external/animsition/js/animsition.min.js"></script>
+
   <script src="../../../node_modules/mdbootstrap/js/mdb.js"></script>
   <script src="../../../node_modules/mdbootstrap/js/bootstrap.min.js"></script>
-  
   <script>require('../js/renderer_dashboard.js')</script>
   <script>require('../js/common.js')</script>
 </body>
