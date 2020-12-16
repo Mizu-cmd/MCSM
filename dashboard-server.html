@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../node_modules/mdbootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../../node_modules/mdbootstrap/css/mdb.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <script src="https://kit.fontawesome.com/6e9a4a2576.js" crossorigin="anonymous"></script>
+    <title>MCSM</title>
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark special-color-dark sticky-top flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="loadserver.html">MCSM Dashboard</a>
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <input class="form-control form-control-dark w-100 rounded-right" type="text" placeholder="Search" aria-label="Search" id="search">
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
+      <a class="nav-link" href="#">Sign in</a>
+    </li>
+  </ul>
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
+      <a class="nav-link" href="#">Sign out</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collaps">
+      <div class="sidebar-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item align-content-center">
+            <a class="nav-link active" href="dashboard.html">
+              <i class="fas fa-home"></i>
+              Home<span class="sr-only">(current)</span>
+            </a>
+            <a class="nav-link" href="dashboard-server.html">
+              <i class="fas fa-server"></i>
+              <span>Server</span>
+            </a>
+            <a class="nav-link" href="dashboard-players/players-dashboard.html">
+              <i class="fas fa-users"></i>
+              <span>Players</span>
+            </a>
+            <a class="nav-link" href="dashboard-world.html">
+              <i class="fas fa-globe-asia"></i>
+              Worlds
+            </a>
+            <a class="nav-link" href="dashboard-terminal.html">
+              <i class="fas fa-terminal"></i>
+              Terminal
+            </a>
+            <a class="nav-link" href="dashboard-mods.html">
+              <i class="fas fa-cogs"></i>
+              Mods
+            </a>
+            <a class="nav-link" href="dashboard-plugins.html">
+              <i class="fas fa-plug"></i>
+              Plugins
+            </a>
+          </li>
+        </ul>
+  
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+          <span>Details</span>
+          <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
+            <i class="fas fa-plus-circle"></i>
+          </a>
+        </h6>
+        <ul class="nav flex-column mb-2">
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard-statistics.html">
+              <i class="fas fa-chart-bar"></i>
+              Statistics
+            </a>
+            <a class="nav-link" href="dashboard-logs.html">
+              <i class="fas fa-scroll"></i>
+              Logs
+            </a>
+            <a class="nav-link" href="dashboard-admin.html">
+              <i class="fas fa-user-shield"></i>
+              Admin
+            </a>
+            <a class="nav-link" href="dashboard-settings.html">
+              <i class="fas fa-cog"></i>
+              Settings
+            </a>
+            <a class="nav-link" href="suport.html">
+              <i class="fas fa-comment-alt"></i>
+              Credits
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 animated fadeIn">
+    <p class="text-center text-dark font-weight-bold h2 p-2 mt-4">Settings 
+      <i class="fas fa-folder-open float-right interact" id="open-folder" data-toggle="tooltip" title="Open server folder"></i>
+    </p>
+    </br>
+      <div class="container">
+        <div class="row" data-toggle="popover-hover" data-img="https://minecraft.tools/fr/css/img/index/motd.jpg" title="<span class='text-dark'>MOTD Exemple</span>">
+            <div class="text-center col p-3 m-3 shadow-lg z-depth-3 rounded" style="background-color:#3e515b;" id="modt">
+              <span class="font-weight-bold">MODT
+                <input type="text" id="modt" class="form-control mt-2">
+              </span>
+          </div>
+        </div>
+      </div>
+      
+      <hr class="special-color-dark mt-5"/>
+      
+      <div class="container text-dark">
+        <h1 class="text-center text-dark font-weight-bold h3">Generals</h1>
+      </br>
+        <div class="row">
+          <div class="col" data-toggle="tooltip" title="Choose your default gamemode">
+            <div id="default_gamemode">
+              <p class="text-center h5">Gamemode</p>
+              <select class="browser-default custom-select" >
+                <option value="Survival" selected>Survival</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Creative">Creative</option>
+                <option value="Spectator">Spectator</option>
+              </select>
+            </div>
+          </div>
+          <div class="col" data-toggle="tooltip" title="Choose your difficulty">
+            <div id="difficulty">
+              <p class="text-center h5">Difficulty</p>
+              <select class="browser-default custom-select">
+                <option value="Survival">Peaceful</option>
+                <option value="Adventure">Easy</option>
+                <option value="Creative" selected>Normal</option>
+                <option value="Spectator">Hard</option>
+              </select>
+            </div>
+            </div>
+        </div>
+      </div>
+      </br>
+    </br>
+      <div class="container text-dark text-center h6">
+        <div class="row">
+          <div class="col">
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="pvp" checked>
+              <label class="custom-control-label interact" for="pvp" data-toggle="tooltip" title="Enable or disable PVP in server">PVP</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="online-mod">
+              <label class="custom-control-label interact" for="online-mod" data-toggle="tooltip" title="Allow crack on your server">Online mod</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="force-gamemode">
+              <label class="custom-control-label interact" for="force-gamemode" data-toggle="tooltip" title="Force gamemode on your server">Force gamemode</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="hardcore">
+              <label class="custom-control-label interact" for="hardcore" data-toggle="tooltip" title="Enable or disable hardcore in your server">Hardcore</label>
+            </div>
+          </div>
+        </div>
+      <hr class="text-muted mt-5"/>
+      <h1 class="text-dark text-center h3 font-weight-bold">Entities</h1>
+      </br>
+        <div class="row">
+          <div class="col">
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="villager" checked>
+              <label class="custom-control-label interact" for="villager" data-toggle="tooltip" title="Spawn villager ?">Spawn villager</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="animals" checked>
+              <label class="custom-control-label interact" for="animals" data-toggle="tooltip" title="Spawn animals ?">Spawn animals</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="monsters" checked>
+              <label class="custom-control-label interact" for="monsters" data-toggle="tooltip" title="Spawn monsters ?">Spawn monsters</label>
+            </div>
+          </div>
+        </div>
+      </br>
+      </br>
+        <p class="h6">Max players</p>
+        <input type="number" id="max-players" class="form-control" value="20" onkeydown="javascript: return event.keyCode == 69 ? false : true">
+        <hr class="text-muted mt-5"/>
+      </div>
+      <div class="container text-center text-dark">
+        <h1 class="h3 font-weight-bold">Other</h1>
+      </br>
+        <div class="row">
+          <div class="col">
+            <p class="h6">Max RAM</p>
+            <div class="d-flex justify-content-center my-4">
+              <div class="w-75">
+                <input type="range" class="custom-range" id="min-ram" min="500" max="32000" value="512" data-toggle="tooltip" title="Set the minimun ram of your server">
+              </div>
+              <span class="font-weight-bold text-dark ml-2 min-ram-span"></span>
+            </div>
+          </div>
+          <div class="col">
+            <p class="h6">Min RAM</p>
+            <div class="d-flex justify-content-center my-4">
+              <div class="w-75">
+                <input type="range" class="custom-range" id="max-ram" min="500" max="32000" value="512" data-toggle="tooltip" title="Set the maximum ram of your server">
+              </div>
+              <span class="font-weight-bold text-dark ml-2 max-ram-span"></span>
+            </div>
+          </div>
+        </div>
+        </br>
+        <div class="row">
+          <div class="col" data-toggle="tooltip" title="Set port of your server">
+            <p class="h6">Server port</p>
+            <input type="number" id="port" class="form-control" value="25565" onkeydown="javascript: return event.keyCode == 69 ? false : true">
+          </div>
+          <div class="col" data-toggle="tooltip" title="Set max tick speed">
+            <p class="h6">Max tick speed</p>
+            <input type="number" id="tick" class="form-control" value="60000" onkeydown="javascript: return event.keyCode == 69 ? false : true">
+          </div>
+        </div>
+      </br>
+      </br>
+      <div class="row">
+        <div class="col">
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="flight" checked>
+            <label class="custom-control-label interact" for="flight" data-toggle="tooltip" title="Enable or disable flight in server">Allow flight</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="RCON">
+            <label class="custom-control-label interact" for="RCON" data-toggle="tooltip" title="Authorize remote access to the server console">Enable RCON</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="command_block">
+            <label class="custom-control-label interact" for="command_block" data-toggle="tooltip" title="Enable command block ?">Enable command block</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="debug">
+            <label class="custom-control-label interact" for="debug" data-toggle="tooltip" title="Enable or disable debug (see more information on the server)">Debug</label>
+          </div>  
+        </div>
+      </br>
+      </div>
+      <div data-toggle="tooltip" title="Set max chunk for players">
+      </br>
+        <p class="text-center h6">View distance</p>
+        <div class="def-number-input number-input safari_only justify-content-center" style="transform: translate(207.5%);">
+          <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+          <input class="quantity" min="0" max="32" name="quantity" value="10" type="number">
+          <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+        </div>
+        <br>       
+      </diV>
+      <div class="row">
+        <div class="col" data-toggle="tooltip" title="Add default ressource pack (put the resource pack link)">
+          <p class="h6 text-center">Ressource pack</p>
+          <input type="" class="form-control" id="ressource_pack" placeholder="http://your_ressource_pack_url">
+        </div>
+      </div>
+      <div class="container" id="RCON">
+        <hr class="text-muted mt-5"/>
+        <h1 class="text-center h3 font-weight-bold">RCON settings</h1>
+        <div class="row">
+        </br>
+          <div class="col" data-toggle="tooltip" title="Set password for RCON">
+            <p class="h6 text-center">Password RCON</p>
+            <input type="password" class="form-control" id="Pass_RCON" data-toggle="tootip" title="Set password to access RCON">
+          </div>
+          <div class="col" data-toggle="tooltip" title="Set password for RCON">
+            <p class="h6 text-center">Port RCON</p>
+            <input type="number" class="form-control" id="Port_RCON" value="25575" data-toggle="tooltip" title="Set port for RCON" onkeydown="javascript: return event.keyCode == 69 ? false : true">
+          </div>
+        </div>
+        <hr class="text-muted mt-5">
+      </div>
+    </br>
+    </br>
+    </main>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.10.1/umd/popper.min.js"></script>  
+
+  <script>window.jQuery = window.$ = require('../../../node_modules/jquery/dist/jquery.min.js')</script>
+  <script src="../../../node_modules/mdbootstrap/js/mdb.js"></script>
+  <script src="../../../node_modules/mdbootstrap/js/bootstrap.min.js"></script>
+  
+  <script>require('../js/renderer_dashboard_server.js')</script>
+  <script>require('../js/common.js')</script>
+
+</body>
+</html>

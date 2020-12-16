@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../node_modules/mdbootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../../node_modules/mdbootstrap/css/mdb.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <script src="https://kit.fontawesome.com/6e9a4a2576.js" crossorigin="anonymous"></script>
+
+    <title>MCSM</title>
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark special-color-dark sticky-top flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="loadserver.html">MCSM Dashboard</a>
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <input class="form-control form-control-dark w-100 rounded-right" type="text" placeholder="Search" aria-label="Search" id="search">
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
+      <a class="nav-link" href="#">Sign in</a>
+    </li>
+  </ul>
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
+      <a class="nav-link" href="#">Sign out</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collaps">
+      <div class="sidebar-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item align-content-center">
+            <a class="nav-link active" href="dashboard.html">
+              <i class="fas fa-home"></i>
+              Home<span class="sr-only">(current)</span>
+            </a>
+            <a class="nav-link" href="dashboard-server.html">
+              <i class="fas fa-server"></i>
+              <span>Server</span>
+            </a>
+            <a class="nav-link" href="dashboard-players/players-dashboard.html">
+              <i class="fas fa-users"></i>
+              <span>Players</span>
+            </a>
+            <a class="nav-link" href="dashboard-world.html">
+              <i class="fas fa-globe-asia"></i>
+              Worlds
+            </a>
+            <a class="nav-link" href="dashboard-terminal.html">
+              <i class="fas fa-terminal"></i>
+              Terminal
+            </a>
+            <a class="nav-link" href="dashboard-mods.html">
+              <i class="fas fa-cogs"></i>
+              Mods
+            </a>
+            <a class="nav-link" href="dashboard-plugins.html">
+              <i class="fas fa-plug"></i>
+              Plugins
+            </a>
+          </li>
+        </ul>
+  
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+          <span>Details</span>
+          <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
+            <i class="fas fa-plus-circle"></i>
+          </a>
+        </h6>
+        <ul class="nav flex-column mb-2">
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard-statistics.html">
+              <i class="fas fa-chart-bar"></i>
+              Statistics
+            </a>
+            <a class="nav-link" href="dashboard-logs.html">
+              <i class="fas fa-scroll"></i>
+              Logs
+            </a>
+            <a class="nav-link" href="dashboard-admin.html">
+              <i class="fas fa-user-shield"></i>
+              Admin
+            </a>
+            <a class="nav-link" href="dashboard-settings.html">
+              <i class="fas fa-cog"></i>
+              Settings
+            </a>
+            <a class="nav-link" href="suport.html">
+              <i class="fas fa-comment-alt"></i>
+              Credits
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 animated fadeIn">
+        <h2 class="text-center text-dark m-3 font-weight-bold" id="server-name"></h2>
+        <h3 class="text-center text-muted mb-5" id="state-text">Offline</h3>
+        <!--On/Off-->
+        <div class="border border-dark z-depth-3 bg-light p-3 float-right text-center mr-5 rounded-circle" id="state-box">
+          <span id="state" class="text-dark">Off</span>
+        </div>
+        <div class="container">
+          <div class="row">
+            <!--Players-->
+            <div class="col-5">
+              <div class="p-3 font-weight-bold text-center rounded" style="background-color: #3e515b;" id="players-box">
+                <span>Numbers of player</span>
+                <br/>
+                <span id="num-players" class="text-success"></span>
+              </div>
+            </div>
+            <!--IP-->
+            <div class="col-5 font-weight-bold">
+              <div class="p-3 text-center rounded" style="transition: 0.24s; background-color: #3e515b;"" data-toggle="tooltip" title="Click to copy" id="ip-box">
+                <span>Server ip</span>
+                <br>
+                <span id="ip" class="text-success"></span>
+              </div>
+            </div>
+          </div>
+          <hr class="text-muted mt-5"/>
+        </div>
+
+        <div class="container mt-5">
+          <div class="row">
+            <!--Version-->
+            <div class="col">
+              <div class="p-3 rounded id="players-box" style="background-color: #3e515b;">
+                <span>Minecraft version</span>
+                <span id="mc-version" class="text-success float-right"></span>
+              </div>
+            </div>
+            <!--Server Version-->
+            <div class="col">
+              <div class="p-3 rounded" id="players-box" style="background-color: #3e515b;">
+                <span id="server-version" class="text-success"></span>
+                <span class="">Server version</span>
+              </div>
+            </div>
+            <!--Online-->
+            <div class="col">
+                <div class="p-3 rounded" id="players-box" style="background-color: #3e515b;">
+                  <span id="online-mod" class="text-success"></span>
+                  <span class="">Online mod</span>
+                </div>
+            </div>
+            <!--MS-->
+            <div class="col">
+              <div class="p-3 rounded" id="players-box" style="background-color: #3e515b;">
+                <span id="MS" class="text-success"></span>
+                <span class="">Server MS</span>
+              </div>
+          </div>
+          </div>
+          <br>
+        </div>
+        <div class="row" data-toggle="tooltip" title="Enter a command without /">
+          <div class="text-center col p-3 m-3 shadow-lg z-depth-3 rounded" style="background-color:#3e515b;" id="modt">
+            <span class="font-weight-bold">Fast Command<input type="text" id="modt" class="form-control mt-2"></span>
+        </div>
+      </div>
+
+    </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.10.1/umd/popper.min.js"></script>  
+
+  <script>window.jQuery = window.$ = require('../../../node_modules/jquery/dist/jquery.min.js')</script>
+
+  <script src="../../../node_modules/mdbootstrap/js/mdb.js"></script>
+  <script src="../../../node_modules/mdbootstrap/js/bootstrap.min.js"></script>
+  <script>require('../js/renderer_dashboard.js')</script>
+  <script>require('../js/common.js')</script>
+</body>
+</html>
