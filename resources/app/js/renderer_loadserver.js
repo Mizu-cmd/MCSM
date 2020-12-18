@@ -29,10 +29,14 @@ fs.readdir(documents + '/MCSM/', function (err, files){
     }
 
     files.forEach(function (file){
-        var div = '<div class="row"><div class="col mt-3 p-3 border border-stylish rounded mb-0 special-color-dark animated fadeIn faster"><button type="button" server="'+file+'" class="btn btn-danger float-right btn-sm btn-delete waves-effect waves-light">Delete</button><button type="button" server="'+file+'" class="btn btn-mdb-color float-right btn-sm btn-rename waves-effect waves-light">Rename</button><button type="button" server="'+file+'" class="btn btn-success float-right btn-sm btn-launch waves-effect waves-light">Launch</button><p>'+file+'</p></div></div>';
+        var div = '<div class="row"><div class="col mt-3 p-3 border border-stylish rounded mb-0 special-color-dark animated fadeIn faster"><button type="button" id="btn-del" server="'+file+'" class="btn btn-danger float-right btn-sm waves-effect waves-light" data-toggle="modal" data-target="#delete">Delete</button><button type="button" server="'+file+'" class="btn btn-mdb-color float-right btn-sm btn-rename waves-effect waves-light">Rename</button><button type="button" server="'+file+'" class="btn btn-success float-right btn-sm btn-launch waves-effect waves-light">Launch</button><p>'+file+'</p></div></div>';
         $('#servers').append(div);
     })
 })
+
+$(document).on('click', '.btn-del',(e) => {
+  $('.btn-delete').attr('server', $(e.target).attr('server'))
+});
 
 $(document).on('click', '.btn-launch',(e) => {
   launch($(e.target).attr('server'))
@@ -42,19 +46,8 @@ $(document).on('click', '.btn-rename',(e) => {
 });
 
 $(document).on('click', '.btn-delete',(e) => {
-  const options = {
-    type: 'question',
-    buttons: [ "I'm shure", 'Cancel'],
-    title: 'Confirm',
-    message: 'Do you realy want to delete the server',
-    detail: 'No undo, it gonna be deleted for ever',
-  };
-  dialog.showMessageBox(null, options).then(result => {
-    if (result.response === 0) {
-      deleteFolderRecursive(documents + '/MCSM/'+$(e.target).attr('server'))
-      location.reload();
-    }
-  });
+  deleteFolderRecursive(documents + '/MCSM/'+$(e.target).attr('server'))
+  location.reload();
 });
 
 function launch(target){

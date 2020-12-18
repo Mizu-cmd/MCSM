@@ -113,10 +113,7 @@
           <a class="nav-link" style="color: #3e515b;" href="players-manage.html">Manage</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" style="color: #3e515b;" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" style="color: #3e515b;" href="#">Profils</a>
+          <a class="nav-link disabled" style="color: #3e515b;" href="players-info.html">Info</a>
         </li>
       </ul>
       </div>
@@ -127,14 +124,70 @@
       <div id="template">
         <div class="mt-3 p-3 border border-stylish rounded mb-0 animated fadeIn faster" style="background-color: #3e515b;">
           <img src="https://crafatar.com/avatars/57390498ec4640b68ab1de522e88ddf8" data-toggle="popover-hover" style="width: 5%;">
-          <a class="h1 ml-2 mt-2" href="player-info" style="color: aliceblue; font-size: 20px;">EkyOz</a>
-          <button type="button" class="btn btn-danger float-right btn-sm">Ban</button>
-          <button type="button" class="btn btn-warning float-right btn-sm">Kick</button>
-          <button type="button" class="btn btn-success float-right btn-sm">Info</button>
+          <a class="h1 ml-2 mt-2" href="players-info.html" style="color: aliceblue; font-size: 20px;">EkyOz</a>
+          <button type="button" class="btn btn float-right btn-sm" style="background-color: #cc0000;" data-toggle="modal" data-target="#modal-ban">Ban</button>
+          <button type="button" class="btn btn float-right btn-sm" style="background-color: #FF8800;" data-toggle="modal" data-target="#modal-kick">Kick</button>
+          <a href="players-info.html" type="button" class="btn btn float-right btn-sm" style="background-color: #00C851;">Info</a>
         </div>
       </div>
     </main>
-    
+
+    <!-- Modal Ban-->
+    <div class="modal fade text-dark" id="modal-ban" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLabel">Do you want to ban this player ?</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Ban duration:</label>
+                <input type="number" id="temp-ban" class="form-control" onkeydown="javascript: return event.keyCode == 69 ? false : true" placeholder="In minute">
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="col-form-label">Message:</label>
+                <textarea class="form-control" id="message-ban"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn" style="background-color: #3e515b; color: white;" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn" style="background-color: #cc0000; color:white">Ban !</button>
+          </div>
+        </div>
+      </div>
+    </div>    
+
+  <!-- Modal Kick-->
+  <div class="modal fade text-dark" id="modal-kick" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLabel">Do you want to kick this player ?</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Message:</label>
+              <textarea class="form-control" id="message-ban"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn" style="background-color: #3e515b; color: white;" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn" style="background-color: #FF8800; color:white">Kick !</button>
+        </div>
+      </div>
+    </div>
+  </div>    
+
   
   
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.10.1/umd/popper.min.js"></script>    
