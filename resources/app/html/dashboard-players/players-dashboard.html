@@ -16,6 +16,8 @@
 
 <body>
 
+<div class="preloader"></div>
+
 <nav class="navbar navbar-dark special-color-dark sticky-top flex-md-nowrap p-0 shadow">
   <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="../loadserver.html">MCSM Dashboard</a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -121,13 +123,13 @@
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 animated fadeIn">
       <h1 class="h2 p-2 mt-4 text-center text-dark font-weight-bold">Players list</h1>
       <br>
-      <div id="template">
+      <div id="d-none template" id="players-box">
         <div class="mt-3 p-3 border border-stylish rounded mb-0 animated fadeIn faster" style="background-color: #3e515b;">
           <img src="https://crafatar.com/avatars/57390498ec4640b68ab1de522e88ddf8" data-toggle="popover-hover" style="width: 5%;">
           <a class="h1 ml-2 mt-2" href="players-info.html" style="color: aliceblue; font-size: 20px;">EkyOz</a>
-          <button type="button" class="btn btn float-right btn-sm" style="background-color: #cc0000;" data-toggle="modal" data-target="#modal-ban">Ban</button>
-          <button type="button" class="btn btn float-right btn-sm" style="background-color: #FF8800;" data-toggle="modal" data-target="#modal-kick">Kick</button>
-          <a href="players-info.html" type="button" class="btn btn float-right btn-sm" style="background-color: #00C851;">Info</a>
+          <button type="button" class="btn btn float-right btn-sm" player="" style="background-color: #cc0000;" data-toggle="modal" data-target="#modal-ban">Ban</button>
+          <button type="button" class="btn btn float-right btn-sm" player="" style="background-color: #FF8800;" data-toggle="modal" data-target="#modal-kick">Kick</button>
+          <a href="players-info.html" player="" type="button" class="btn btn float-right btn-sm" style="background-color: #00C851;">Info</a>
         </div>
       </div>
     </main>

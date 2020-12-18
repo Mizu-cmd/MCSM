@@ -1,6 +1,7 @@
 const { remote } = require('electron');
 const app = remote.app;
 var server = remote.getGlobal('sharedObject').server;
+var http = require('http');
 
 let documents = app.getPath('documents');
 
@@ -36,3 +37,18 @@ $(document).on('click', '#uuid', (e) =>{
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip()
 })
+
+
+var options = {
+  host: 'localhost',
+  port: 8000,
+  path: '/players'
+};
+
+http.get(options, function(res){
+  res.on("data", function(chunk) {
+      console.log(JSON.parse(chunk.toString()).players[0]['IP']);
+      $('#ip-player').text(JSON.parse(chunk.toString()).players[0]['IP']);
+      $('#ip-uuid').text(JSON.parse(chunk.toString()).players[0]['UUID']);
+  });
+});
