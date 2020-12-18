@@ -13,6 +13,21 @@ $('[data-toggle="popover-hover"]').popover({
         }    
   });
 
+$('#skin-box').append('<canvas style="outline: none !important; box-shadow: none" id="skin_container"></canvas>');
+let skinViewer = new skinview3d.SkinViewer({
+  canvas: document.getElementById("skin_container"),
+  skin: "https://crafatar.com/skins/57390498ec4640b68ab1de522e88ddf8"
+});
+skinViewer.width = 260;
+skinViewer.height = 350;
+let control = skinview3d.createOrbitControls(skinViewer);
+control.enableRotate = true;
+control.enableZoom = false;
+control.enablePan = false;
+let walk = skinViewer.animations.add(skinview3d.WalkingAnimation);
+let rotate = skinViewer.animations.add(skinview3d.RotatingAnimation);
+rotate.resetAndRemove();
+
 $('[data-toggle="popover-hover"]').hover(function () {
     setTimeout(
         function() 
@@ -22,7 +37,7 @@ $('[data-toggle="popover-hover"]').hover(function () {
                 canvas: document.getElementById("skin_container"),
                 width: 200,
                 height: 300,
-                skin: "https://minotar.net/skin/hello"
+                skin: "https://crafatar.com/avatars/57390498ec4640b68ab1de522e88ddf8"
             });
 
             // Change viewer size

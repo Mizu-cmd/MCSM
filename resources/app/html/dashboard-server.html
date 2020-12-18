@@ -13,6 +13,8 @@
 
 <body>
 
+<div class="preloader"></div>
+
 <nav class="navbar navbar-dark special-color-dark sticky-top flex-md-nowrap p-0 shadow">
   <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="loadserver.html">MCSM Dashboard</a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -176,7 +178,7 @@
           </div>
         </div>
       <hr class="text-muted mt-5"/>
-      <h1 class="text-dark text-center h3 font-weight-bold">Entities</h1>
+      <h1 class="text-dark text-center h3 mb-3 font-weight-bold">Entities</h1>
       </br>
         <div class="row">
           <div class="col">
@@ -292,9 +294,9 @@
             <p class="h6 text-center">Password RCON</p>
             <input type="password" class="form-control" id="Pass_RCON" data-toggle="tootip" title="Set password to access RCON">
           </div>
-          <div class="col" data-toggle="tooltip" title="Set password for RCON">
+          <div class="col" data-toggle="tooltip" title="Set port for RCON">
             <p class="h6 text-center">Port RCON</p>
-            <input type="number" class="form-control" id="Port_RCON" value="25575" data-toggle="tooltip" title="Set port for RCON" onkeydown="javascript: return event.keyCode == 69 ? false : true">
+            <input type="number" class="form-control" id="Port_RCON" value="25575" onkeydown="javascript: return event.keyCode == 69 ? false : true">
           </div>
         </div>
         <hr class="text-muted mt-5">

@@ -113,10 +113,7 @@
           <a class="nav-link" style="color: #3e515b;" href="players-manage.html">Manage</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" style="color: #3e515b;" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" style="color: #3e515b;" href="#">Profils</a>
+          <a class="nav-link disabled" style="color: #3e515b;" href="players-info.html">Info</a>
         </li>
       </ul>
       </div>
@@ -127,10 +124,10 @@
       <div id="template">
         <div class="mt-3 p-3 border border-stylish rounded mb-0 animated fadeIn faster" style="background-color: #3e515b;">
           <img src="https://crafatar.com/avatars/57390498ec4640b68ab1de522e88ddf8" data-toggle="popover-hover" style="width: 5%;">
-          <a class="h1 ml-2 mt-2" href="player-info" style="color: aliceblue; font-size: 20px;">EkyOz</a>
+          <a class="h1 ml-2 mt-2" href="players-info.html" style="color: aliceblue; font-size: 20px;">EkyOz</a>
           <button type="button" class="btn btn float-right btn-sm" style="background-color: #cc0000;" data-toggle="modal" data-target="#modal-ban">Ban</button>
           <button type="button" class="btn btn float-right btn-sm" style="background-color: #FF8800;" data-toggle="modal" data-target="#modal-kick">Kick</button>
-          <a href="players-manage.html" type="button" class="btn btn float-right btn-sm" style="background-color: #00C851;">Info</a>
+          <a href="players-info.html" type="button" class="btn btn float-right btn-sm" style="background-color: #00C851;">Info</a>
         </div>
       </div>
     </main>
@@ -149,7 +146,7 @@
             <form>
               <div class="form-group">
                 <label for="recipient-name" class="col-form-label">Ban duration:</label>
-                <input type="number" id="temp-ban" class="form-control">
+                <input type="number" id="temp-ban" class="form-control" onkeydown="javascript: return event.keyCode == 69 ? false : true" placeholder="In minute">
               </div>
               <div class="form-group">
                 <label for="message-text" class="col-form-label">Message:</label>
