@@ -128,25 +128,31 @@
               <h2 class="font-weight-bold text-center rounded pb-2 mb-4" style="background-color: #3e515b;">Ekyoz</h2>
               <div class="row">
                 <div class="col border-right" style="border-color: #3e515b;">
-                  <h3 class="text-dark text-center font-weight-bold">In game</h3>  
+                  <h3 class="text-dark text-center font-weight-bold">Info game</h3>  
                   <br>
-                  <p class="text-dark" style="font-size: 19px;">Health</p>  
+                  <p class="text-dark font-weight-bold" style="font-size: 19px;">Health</p>  
                   <div class="progress" id="health">
                     <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="20" style="width: 90%;"></div>
                   </div>
                   <br>
-                  <p class="text-dark" style="font-size: 19px;">Experience</p>
+                  <p class="text-dark font-weight-bold" style="font-size: 19px;">Experience</p>
                   <div class="progress" id="experience">
                     <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="20" style="width: 22%; background-color: #8bc34a;"></div>
                   </div>
                   <br>
-                  <p class="text-dark" style="font-size: 19px;">Food</p>
+                  <p class="text-dark font-weight-bold" style="font-size: 19px;">Food</p>
                   <div class="progress" id="food">
                     <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="20" style="width: 95%; background-color: #795548;"></div>
                   </div>
                 </div>  
                 <div class="col">
-
+                  <h3 class="text-center text-dark font-weight-bold">Info server</h3>
+                  <br> 
+                  <p class="text-dark font-weight-bold" style="font-size: 19px;" data-toggle="tooltip" title="Click to copy !">UUID : <br><span id="uuid_player" class="font-weight-normal">57390498-ec46-40b6-8ab1-de522e88ddf8</span></p>
+                  <br>
+                  <p class="text-dark font-weight-bold" style="font-size: 19px;">IP : <span class="font-weight-normal" id="ip_players">85.569.215.256</span></p>
+                  <br>
+                  <p class="text-dark font-weight-bold" style="font-size: 19px;">Op : <span id="op_player" class="font-weight-normal">Modérateur</span></p>
                 </div>     
               </div>
               <br>
@@ -155,11 +161,14 @@
         </div>
       </main>
   
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.10.1/umd/popper.min.js"></script>    
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.10.1/umd/popper.min.js"></script>   
+
 <script>window.jQuery = window.$ = require('../../../../node_modules/jquery/dist/jquery.min.js')</script>
 <script src="../../../../node_modules/mdbootstrap/js/mdb.js"></script>
 <script src="../../../../node_modules/mdbootstrap/js/bootstrap.min.js"></script>
-<script>require('../../js/renderer_dashboard_players.js')</script>
+
+<script>require('../../js/renderer_dashboard_players_info.js')</script>
 <script>require('../../js/common.js')</script>
 
 </body>
