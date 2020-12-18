@@ -2,6 +2,7 @@ const { remote } = require('electron');
 const app = remote.app;
 var server = remote.getGlobal('sharedObject').server;
 
+
 let documents = app.getPath('documents');
 
 $('[data-toggle="popover-hover"]').popover({
@@ -12,7 +13,7 @@ $('[data-toggle="popover-hover"]').popover({
         return '<div id="skin-box" class="container"></div>'; 
         }    
   });
-
+  
 $('[data-toggle="popover-hover"]').hover(function () {
     setTimeout(
         function() 
@@ -22,7 +23,7 @@ $('[data-toggle="popover-hover"]').hover(function () {
                 canvas: document.getElementById("skin_container"),
                 width: 200,
                 height: 300,
-                skin: "https://minotar.net/skin/hello"
+                skin: "https://minotar.net/skin/Eky0z"
             });
 
             // Change viewer size

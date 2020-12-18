@@ -42,3 +42,13 @@ $(document).ready(function() {
     });
   });
   
+  $('#RCON-box').hide();
+
+  $('#RCON').change(function() {
+    if(this.checked) {
+      $('#RCON-box').show();
+      $("html, body").animate({ scrollTop: $(document).height() }, 1000);
+    }else{
+      $('#RCON-box').hide();
+    }
+});

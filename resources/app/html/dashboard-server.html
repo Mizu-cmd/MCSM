@@ -7,11 +7,14 @@
     <link rel="stylesheet" type="text/css" href="../../../node_modules/mdbootstrap/css/mdb.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/server.css">
     <script src="https://kit.fontawesome.com/6e9a4a2576.js" crossorigin="anonymous"></script>
     <title>MCSM</title>
 </head>
 
 <body>
+
+<div class="preloader"></div>
 
 <nav class="navbar navbar-dark special-color-dark sticky-top flex-md-nowrap p-0 shadow">
   <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="loadserver.html">MCSM Dashboard</a>
@@ -102,7 +105,7 @@
     </nav>
 
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 animated fadeIn">
-    <p class="text-center text-dark font-weight-bold h2 p-2 mt-4">Settings 
+    <p class="text-center text-dark font-weight-bold h2 mt-4 ml-5">Settings 
       <i class="fas fa-folder-open float-right interact" id="open-folder" data-toggle="tooltip" title="Open server folder"></i>
     </p>
     </br>
@@ -270,11 +273,14 @@
       <div data-toggle="tooltip" title="Set max chunk for players">
       </br>
         <p class="text-center h6">View distance</p>
-        <div class="def-number-input number-input safari_only justify-content-center" style="transform: translate(207.5%);">
-          <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-          <input class="quantity" min="0" max="32" name="quantity" value="10" type="number">
-          <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+        <div class="custom-control-inline justify-content-center align-content-center text-center m-4">
+          <div class="def-number-input number-input safari_only">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+            <input class="quantity" min="0" name="quantity" value="1" type="number">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+          </div>
         </div>
+
         <br>       
       </diV>
       <div class="row">
@@ -283,7 +289,7 @@
           <input type="" class="form-control" id="ressource_pack" placeholder="http://your_ressource_pack_url">
         </div>
       </div>
-      <div class="container" id="RCON">
+      <div class="container" id="RCON-box">
         <hr class="text-muted mt-5"/>
         <h1 class="text-center h3 font-weight-bold">RCON settings</h1>
         <div class="row">

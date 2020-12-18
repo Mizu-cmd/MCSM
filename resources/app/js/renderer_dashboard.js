@@ -1,6 +1,7 @@
 const { remote } = require('electron');
 var server = remote.getGlobal('sharedObject').server;
-var cp = require("child_process");
+var http = require('http');
+const { info } = require('console');
 const app = remote.app;
 
 let documents = app.getPath('documents');
@@ -14,15 +15,27 @@ $('#state-box').hover(function(){
     $('#state').text('Off');
 });
 
-$('#ip').text('adrress')
-$('#num-players').text('4/50');
+$('#num-players').text('/50');
 $('#mc-version').text(remote.getGlobal('sharedObject').version)
+
+var options = {
+    host: 'ipv4bot.whatismyipaddress.com',
+    port: 80,
+    path: '/'
+};
+
+http.get(options, function(res){
+    res.on("data", function(chunk) {
+        $('#ip').text(chunk);
+        $('#loader').remove();
+    });
+});
 
 $(document).on('click', '#ip-box', (e) =>{
     copyToClipboard($('#ip'));
-    $('[data-toggle="tooltip"]').attr('data-original-title', 'Copied !')
-    $('[data-toggle="tooltip"]').tooltip('hide')
-    $('[data-toggle="tooltip"]').tooltip('show')
+    $('#ip-box [data-toggle="tooltip"]').attr('data-original-title', 'Copied !')
+    $('#ip-box [data-toggle="tooltip"]').tooltip('hide')
+    $('[data-toggle="tooltip"][id="ip-box"]').tooltip('show')
     $('#ip-box').css('transform', 'scale(1.2)')
     setTimeout(
         function() 
