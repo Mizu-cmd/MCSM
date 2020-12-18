@@ -13,6 +13,8 @@
 </head>
 
 <body>
+  
+<div class="preloader"></div>
 
 <nav class="navbar navbar-dark special-color-dark sticky-top flex-md-nowrap p-0 shadow">
   <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="loadserver.html">MCSM Dashboard</a>
@@ -124,6 +126,9 @@
               <div class="p-3 text-center rounded" style="transition: 0.24s; background-color: #3e515b;"" data-toggle="tooltip" title="Click to copy" id="ip-box">
                 <span>Server ip</span>
                 <br>
+                <div class="spinner-grow text-light" id="loader" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
                 <span id="ip" class="text-success"></span>
               </div>
             </div>
