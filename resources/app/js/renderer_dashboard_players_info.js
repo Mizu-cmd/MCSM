@@ -12,6 +12,7 @@ var UUID;
 var health;
 var food;
 var xp;
+var mining;
 
 var options = {
   host: 'localhost',
@@ -33,12 +34,26 @@ http.get(options, function(res){
   });
 });
 
+var options = {
+  host: 'localhost',
+  port: 8081,
+  path: '/mining?p='+player,
+};
+
+http.get(options, function(res){
+  res.on("data", function(chunk) {
+      mining = JSON.parse(chunk.toString()).players['value']+'%';
+      $('#topluck').text(mining);
+  });
+});
+
 function writeInfo(){
   $('#uuid-player').text(UUID);
   $('#player-name').text(player);
   $('#ip-player').text(ip);
   $('#player-health').css('width', health*5+'%');
-  $('#player-food').css('width', health*5+'%');
+  $('#player-food').css('width', food*5+'%');
+  $('#player-xp').css('width', xp*100+'%');
 }
 
 function enableSkinView(){
