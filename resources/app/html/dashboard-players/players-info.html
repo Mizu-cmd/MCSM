@@ -120,11 +120,11 @@
       </ul>
       </div>
 
-      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 animated fadeIn">
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 animated fadeIn text-dark">
         <div class="container">
           <div class="row">
             <div class="col border shadow mt-4 col-md-4">
-              <canvas id="skin_container" style="outline: none !important"></canvas>
+              <canvas class="mt-3 mr-2" id="skin_container" style="outline: none !important"></canvas>
             </div>
             <div class="col rounded mt-4">
               <h2 class="font-weight-bold text-center rounded pb-2 mb-4" style="background-color: #3e515b;" id="player-name"></h2>
@@ -161,6 +161,35 @@
             </div>
           </div>
         </div>
+        <br>
+        <br>
+        <div class="row">
+          <div class="col border-right">
+            <h2 class="text-dark text-center font-weight-bold">Mining</h2>
+            <br>
+            <div class="row">
+              <div class="col border-right text-dark">
+                <h4 class="text-center text-white pb-1 mt-2 rounded" style="background-color: #3e515b;">Mined ores</h4>
+                <p style="font-size: 19px;">Diamond ore : <span class="text-dark" id="diamand">16 <img class="float-right" src="https://freepngimg.com/thumb/minecraft/11-2-minecraft-diamond-png.png" style="width: 15%;"></span></p>
+                <p style="font-size: 19px;">Emerald ore : <span class="text-dark" id="emerald">3 <img class="float-right" src="https://lh3.googleusercontent.com/proxy/eNBJAG5yPc3zZ-OZWW7ss2NsV4XmgfsBComXEM7VIKtwfA5csZiYRxnfeWOOarlOx6H0RMvy6bGeOtD1fK2i4r-jzKGlaiaxuOU0a_ZZ0UPlu8-J48PKQVS6STe4HgM4qxw" style="width: 15%;"></span></p>
+                <p style="font-size: 19px;">Gold ore : <span class="text-dark" id="gold">25 <img class="float-right" src="https://static.wikia.nocookie.net/minecraft/images/5/5b/GoldIngot18w43a.png/revision/latest/top-crop/width/220/height/220?cb=20200111001533" style="width: 15%;"></span></p>
+                <p style="font-size: 19px;">Redstone ore : <span class="text-dark" id="redstone">46 <img class="float-right" src="https://static.wikia.nocookie.net/minecraft/images/a/af/Redstone_Dust.png/revision/latest?cb=20200826004502" style="width: 15%;"></span></p>
+                <p style="font-size: 19px;">Lapis ore : <span class="text-dark" id="lapis-lazuli">82 <img class="float-right" src="https://static.wikia.nocookie.net/minecraft_fr_gamepedia/images/5/5f/Lapis-lazuli.png/revision/latest/scale-to-width-down/150?cb=20200421130738" style="width: 15%;"></span></p>
+                <p style="font-size: 19px;">Iron ore : <span class="text-dark" id="iron">98 <img class="float-right" src="https://static.wikia.nocookie.net/minecraft/images/e/e8/New_Iron_IngotB.png/revision/latest?cb=20190520101024" style="width: 15%;"></span></p>
+                <p style="font-size: 19px;">Coal ore : <span class="text-dark" id="coal">48 <img class="float-right" src="https://static.wikia.nocookie.net/minecraft/images/8/82/CharcoalNew.png/revision/latest/top-crop/width/220/height/220?cb=20190902205242" style="width: 15%;"></span></p>
+              </div>
+              <div class="col">
+                <h4 class="text-center pb-1 mt-2 rounded text-white" style="background-color: #3e515b;">Stats</h4>
+                <p style="font-size: 19px;">Time to mined : <span id="time">150</span> min</p>
+                <p style="font-size: 19px;">Topluck : <span id="topluck">1.25</span>%</p>
+              </div>
+            </div>
+          </div>
+          <div class="col text-dark">
+            <h2 class="text-dark text-center font-weight-bold">Ban / Kick</h2>
+          </div>
+        </div>
+        <br>
       </main>
   
 
