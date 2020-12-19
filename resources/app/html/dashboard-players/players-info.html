@@ -16,6 +16,8 @@
 
 <body>
 
+<div class="preloader"></div>
+
 <nav class="navbar navbar-dark special-color-dark sticky-top flex-md-nowrap p-0 shadow">
   <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="../loadserver.html">MCSM Dashboard</a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -125,24 +127,24 @@
               <canvas id="skin_container" style="outline: none !important"></canvas>
             </div>
             <div class="col rounded mt-4">
-              <h2 class="font-weight-bold text-center rounded pb-2 mb-4" style="background-color: #3e515b;">Ekyoz</h2>
+              <h2 class="font-weight-bold text-center rounded pb-2 mb-4" style="background-color: #3e515b;" id="player-name"></h2>
               <div class="row">
                 <div class="col border-right" style="border-color: #3e515b;">
                   <h3 class="text-dark text-center font-weight-bold">Info game</h3>  
                   <br>
                   <p class="text-dark font-weight-bold" style="font-size: 19px;">Health</p>  
                   <div class="progress" id="health">
-                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="20" style="width: 90%;"></div>
+                    <div class="progress-bar bg-danger" id="player-health" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="20" style="width: 0%;"></div>
                   </div>
                   <br>
                   <p class="text-dark font-weight-bold" style="font-size: 19px;">Experience</p>
                   <div class="progress" id="experience">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="20" style="width: 22%; background-color: #8bc34a;"></div>
+                    <div class="progress-bar" role="progressbar" id="player-xp" aria-valuenow="0" aria-valuemin="0" aria-valuemax="20" style="width: 22%; background-color: #8bc34a;"></div>
                   </div>
                   <br>
                   <p class="text-dark font-weight-bold" style="font-size: 19px;">Food</p>
                   <div class="progress" id="food">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="20" style="width: 95%; background-color: #795548;"></div>
+                    <div class="progress-bar" role="progressbar" id="player-food" aria-valuenow="0" aria-valuemin="0" aria-valuemax="20" style="width: 95%; background-color: #795548;"></div>
                   </div>
                 </div>  
                 <div class="col">
