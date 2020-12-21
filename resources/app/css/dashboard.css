@@ -118,20 +118,6 @@ body {
 /*
  * Home
  */
-
-#state-box{
-  transition: 0.24s;
-}
-
-#state-box:hover{
-  transform: scale(1.05);
-  background-color: black !important;
-  cursor: pointer;
-}
-#state-box:hover span{
-  color: white !important;
-}
-
 .interact{
   transition: 0.24s;
 }
@@ -163,3 +149,5 @@ input[type=range]::-ms-thumb {
   background-color: #FFF;
   background-position: center;
 }
+
+
