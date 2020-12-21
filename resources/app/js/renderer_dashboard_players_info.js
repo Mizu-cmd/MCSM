@@ -10,6 +10,9 @@ var ip;
 var name;
 var UUID;
 var health;
+var food;
+var xp;
+var mining;
 
 var options = {
   host: 'localhost',
@@ -23,9 +26,24 @@ http.get(options, function(res){
       name = JSON.parse(chunk.toString()).players[0]['name'];
       ip = JSON.parse(chunk.toString()).players[0]['IP'];
       health = JSON.parse(chunk.toString()).players[0]['health'];
+      food = JSON.parse(chunk.toString()).players[0]['food'];
+      xp = JSON.parse(chunk.toString()).players[0]['xp'];
 
       enableSkinView();
       writeInfo();
+  });
+});
+
+var options = {
+  host: 'localhost',
+  port: 8081,
+  path: '/mining?p='+player,
+};
+
+http.get(options, function(res){
+  res.on("data", function(chunk) {
+      mining = JSON.parse(chunk.toString()).players['topluck']+'%';
+      $('#topluck').text(mining);
   });
 });
 
@@ -34,6 +52,8 @@ function writeInfo(){
   $('#player-name').text(player);
   $('#ip-player').text(ip);
   $('#player-health').css('width', health*5+'%');
+  $('#player-food').css('width', food*5+'%');
+  $('#player-xp').css('width', xp*100+'%');
 }
 
 function enableSkinView(){
