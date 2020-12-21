@@ -42,7 +42,7 @@ var options = {
 
 http.get(options, function(res){
   res.on("data", function(chunk) {
-      mining = JSON.parse(chunk.toString()).players['value']+'%';
+      mining = JSON.parse(chunk.toString()).players['topluck']+'%';
       $('#topluck').text(mining);
   });
 });
