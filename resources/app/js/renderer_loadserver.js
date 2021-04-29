@@ -34,7 +34,7 @@ fs.readdir(documents + '/MCSM/', function (err, files){
     })
 })
 
-$(document).on('click', '.btn-del',(e) => {
+$(document).on('click', '#btn-del',(e) => {
   $('.btn-delete').attr('server', $(e.target).attr('server'))
 });
 
@@ -51,11 +51,8 @@ $(document).on('click', '.btn-delete',(e) => {
 });
 
 function launch(target){
-  var properties = fs.readFile(documents+'/MCSM/'+target+'/mcsm.json', (err, data) =>{
-    if (err) throw err;
-    remote.getGlobal('sharedObject').version = JSON.parse(data).version;
-  });
-  remote.getGlobal('sharedObject').server = target;
+
+  sessionStorage.setItem('server', target)
   ipc.send("terminal.keystroke",'cd "' + documents + '/MCSM/' + target+'"\r');
   ipc.send("terminal.keystroke",'clear\r');
   window.location = 'dashboard.html';

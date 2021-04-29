@@ -1,5 +1,5 @@
 const { remote } = require('electron');
-var server = remote.getGlobal('sharedObject').server;
+var server = sessionStorage.getItem('server');
 const fs = require('fs');
 var http = require('http');
 

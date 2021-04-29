@@ -11,11 +11,6 @@ var shell = os.platform() === "win32" ? "powershell.exe" : "bash";
 var mainWindow = null;
 let dir = app.getPath('documents') + '/MCSM/';
 
-global.sharedObject = {
-    server: '',
-    version: ''
-  }
-
 app.on("window-all-closed", function(){
     if (process.platform != "darwin"){
         app.quit();
@@ -51,7 +46,7 @@ app.on("ready", function(){
         }
       })
 
-    mainWindow.loadURL("file://"+__dirname+'/html/loadserver.html')
+    mainWindow.loadURL("http://localhost:5000/dashboard")
     mainWindow.toggleDevTools();
 
     ptyProcess.on('data', function(data) {

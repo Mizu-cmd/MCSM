@@ -1,5 +1,6 @@
 const { remote } = require('electron');
-var server = remote.getGlobal('sharedObject').server;
+var fs = require('fs');
+var server = sessionStorage.getItem('server');
 var http = require('http');
 const { info } = require('console');
 const app = remote.app;
@@ -16,7 +17,10 @@ $('#state-box').hover(function(){
 });
 
 $('#num-players').text('/50');
-$('#mc-version').text(remote.getGlobal('sharedObject').version)
+fs.readFile(documents+'/MCSM/'+sessionStorage.getItem('server')+'/mcsm.json', (err, data) =>{
+    if (err) throw err;
+    $('#mc-version').text(JSON.parse(data).version)
+  });
 
 var options = {
     host: 'ipv4bot.whatismyipaddress.com',
@@ -28,6 +32,18 @@ http.get(options, function(res){
     res.on("data", function(chunk) {
         $('#ip').text(chunk);
         $('#loader').remove();
+    });
+});
+
+var player = {
+    host: 'localhost',
+    port: 8081,
+    path: '/players'
+};
+
+http.get(player, function(res){
+    res.on("data", function(chunk) {
+        $('#num-players').text(JSON.parse(chunk.toString()).count);
     });
 });
 

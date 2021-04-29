@@ -1,7 +1,7 @@
 const { remote } = require('electron');
 var fs = require('fs');
 const readline = require('readline');
-var server = remote.getGlobal('sharedObject').server;
+var server = sessionStorage.getItem('server');
 
 const app = remote.app;
 

@@ -1,6 +1,6 @@
 const { remote } = require('electron');
 const app = remote.app;
-var server = remote.getGlobal('sharedObject').server;
+var server = sessionStorage.getItem('server');
 var http = require('http');
 
 let documents = app.getPath('documents');
