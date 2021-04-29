@@ -8,7 +8,7 @@
 - [X] Logs
 - [ ] World tab
 - [ ] Plugins / Mods tab
-- [ ] Players / Entities tab
+- [X] Players / Entities tab
 - [ ] Block tab
 - [ ] Discord integration tab
 
